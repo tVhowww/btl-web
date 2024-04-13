@@ -1,0 +1,131 @@
+ /* Man hinh mobile */
+
+ @media only screen and (max-width: 1028px) {
+    .mt-20 {
+        margin-top: 20px;
+    }
+
+    .form-reach {
+        width: 100%;
+    }
+
+    .container-fluid {
+        padding: 0;
+    }
+
+    .nav-mobile {
+        position: fixed;
+        display: none;
+        left: -100%;
+        top: 80px;
+        background-color: #f0f0f0;
+        height: 100%;
+        width: 100%;
+        padding: 20px;
+        font-size: 2rem;
+        font-weight: 600;
+        transition: 0.4s;
+    }
+
+    .nav__shopping-cart {
+        display: block;
+        position: absolute;
+        right: 30px;
+        top: 15px;
+        font-size: 3rem;
+    }
+
+    .open-menu {
+        display: block;
+        position: absolute;
+        left: 10px;
+        top: 10px;
+        width: 50px;
+        height: 50px;
+        border: none;
+        background: none;
+        font-size: 3rem;
+    }
+
+    .nav-pc {
+        display: none;
+    }
+
+    .nav-mobile {
+        right: 0;
+        display: block;
+        z-index: 5;
+        overflow: scroll;
+        height: calc(100% - 80px);
+    }
+
+    .nav-mobile li a {
+        padding: 10px 0;
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid gainsboro;
+        border-radius: 5px;
+    }
+
+    .nav-mobile li a:hover {
+        box-shadow: 0 3px 5px 0 gainsboro;
+    }
+
+    .nav-mobile li i {
+        min-height: 20px;
+        margin-right: 10px;
+        text-align: center;
+    }
+
+    .nav-mobile__subnav {
+        transition: 0s;
+    }
+
+    .sub-nav__mobile {
+        position: unset;
+        opacity: 1;
+        display: block;
+    }
+
+    .sub-nav__mobile li {
+        padding: 0 5px;
+    }
+
+    .sub-nav__mobile li a {
+        color: #777;
+    }
+
+    .form__search--mobile {
+        padding: 7px 0;
+        text-align: end;
+        border-bottom: 1px solid gainsboro;
+        border-radius: 5px;
+    }
+
+    .form__search--mobile input {
+        width: 40%;
+        padding: 0 10px;
+        transition: 0.5s;
+    }
+
+    .form__search--mobile input:focus {
+        width: 80%;
+        outline: none;
+        border: 1px solid #a1a1a1;
+        box-shadow: 0 0 5px 0 #a1a1a1;
+    }
+
+    .form__search--mobile button {
+        width: 30px;
+        min-width: 40px;
+        float: right;
+        background: none;
+        border: none;
+        text-align: end;
+    }
+
+    .btn-add-to-cart {
+        display: block;
+    }
+
+}

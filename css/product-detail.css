@@ -1,0 +1,149 @@
+.container-lg.content {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    /* background-color: #eeeeeeee; */
+}
+
+.carousel-inner {
+    box-shadow: 0 0 20px #d3cfcf;
+    margin: 5px 0;
+    max-width: 72%;
+}
+
+.carousel-inner img {
+    max-width: 100%;
+    height: auto;
+}
+
+#custCarousel .carousel-indicators {
+    position: static;
+    margin-top: 20px;
+}
+
+#custCarousel .carousel-indicators>li {
+    width: 100px;
+    height: 75px;
+
+}
+
+.carousel-indicators li {
+    opacity: unset;
+}
+
+#custCarousel .carousel-indicators li img {
+    display: block;
+    opacity: 0.7;
+    height: 75px;
+}
+
+#custCarousel .carousel-indicators li.active img {
+    opacity: 1;
+    border: 1px solid #888;
+}
+
+#custCarousel .carousel-indicators li:hover img {
+    opacity: 0.9;
+}
+
+.carousel-item img {
+    /* max-width: 72%; */
+}
+
+/*  */
+.content .row {
+    margin: 20px 5px;
+}
+
+.content .breadcrumb {
+    margin-top: 5px;
+    /* box-shadow: 0 2px 20px #eceaea; */
+    font-size: 1.4rem;
+    border-bottom: 2px solid #333;
+}
+
+.content .breadcrumb-item a {
+    color: #000;
+}
+
+.content .breadcrumb-item a:hover {
+    color: var(--breadcrumb-color);
+}
+
+.detail-desc {
+    font-size: 1.8rem;
+}
+
+.detail-label {
+    font-weight: 500;
+    margin-right: 5px;
+}
+
+/*  */
+.row.tools {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.buy-btn {
+    width: 300px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: #000;
+    color: #fff;
+    font-size: 1.4rem;
+    border-radius: 2px;
+    text-transform: uppercase;
+}
+
+.add-cart-btn {
+    width: 50px;
+    padding: 10px;
+    border: none;
+    outline: none;
+    background-color: #fff;
+    box-shadow: 0 0 20px #cecccc;
+    color: #000;
+    font-size: 1.4rem;
+    border-radius: 2px;
+    text-transform: uppercase;
+}
+
+
+div.quantity {
+    display: inline-flex;
+}
+
+div.quantity input[type="button"] {
+    padding: 0 5px;
+    min-width: 25px;
+    min-height: unset;
+    height: 42px;
+    border: 1px solid #ccc;
+    background: none;
+    box-shadow: none;
+}
+
+div.quantity input[type="number"] {
+    width: 30px;
+    border-radius: 0;
+    border: 1px solid #ccc;
+    outline: none;
+    padding: 0;
+    text-align: center;
+}
+
+div.quantity :is(input[type="number"],input[type="text"]) {
+    height: 42px;
+}
+
+div.quantity input[type=number]::-webkit-inner-spin-button, 
+div.quantity input[type=number]::-webkit-outer-spin-button, 
+div.quantity input[type="number"] {
+    margin: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,11 +14,12 @@
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/responsive.css">
     <link rel="stylesheet" href="../css/product.css">
-    
+
 </head>
+
 <body>
     <div id="main">
-        <!-- Start nav -->
+         <!-- Start nav -->
         <div class="container-lg mb-90">
             <div class="fixed-top" id="nav">
                 <div class="nav-left">
@@ -29,13 +31,13 @@
                         <h6>Glasses model</h6>
                     </div>
                 </div>
-    
+
                 <button class="open-menu">
                     <span>
                         <i class="fa fa-bars"></i>
                     </span>
                 </button>
-    
+
                 <!-- nav mobile -->
                 <div>
                     <ul class="nav-mobile none-list-style">
@@ -52,7 +54,7 @@
                                 </span>
                                 <i class="fa-solid fa-chevron-down"></i>
                             </a>
-    
+
                             <ul class="nav__prod--mobile p-0 none-list-style">
                                 <li class="nav__prod-item">
                                     <a href="#" class="nav__prod-link">Kính Cận</a>
@@ -61,12 +63,12 @@
                                     <a href="#" class="nav__prod-link">Kính Râm</a>
                                 </li>
                                 <li class="nav__prod-item">
-                                    <a href="#" class="nav__prod-link">Accessories</a>
+                                    <a href="#" class="nav__prod-link">Kính Thời Trang</a>
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="about.html">
                                 <span>
                                     Giới thiệu
                                 </span>
@@ -74,9 +76,9 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="members.html">
                                 <span>
-                                    Cửa hàng
+                                    Thành viên
                                 </span>
                                 <i class="fa-solid fa-store"></i>
                             </a>
@@ -103,13 +105,14 @@
                         </li>
                         <li>
                             <form class="form__search--mobile" action="">
-                                <input autocomplete="off" id="search-mobile" type="text" placeholder="Tìm kiếm sản phẩm...">
+                                <input autocomplete="off" id="search-mobile" type="text"
+                                    placeholder="Tìm kiếm sản phẩm...">
                                 <button><i class="fa fa-search" aria-hidden="true"></i></button>
                             </form>
                         </li>
                     </ul>
                 </div>
-    
+
                 <div class="nav-pc nav-center">
                     <ul class="nav__list">
                         <li class="nav__item">
@@ -124,30 +127,30 @@
                                 </span>
                                 <i class="fa-solid fa-chevron-down"></i>
                             </a>
-    
+
                             <ul class="nav__prod--pc none-list-style">
                                 <li class="nav__prod-item">
-                                    <a href="#" class="nav__prod-link">Kính Cận</a>
+                                    <a href="#" class="nav__prod-link">Kinh Cận</a>
                                 </li>
                                 <li class="nav__prod-item">
                                     <a href="#" class="nav__prod-link">Kính Râm</a>
                                 </li>
                                 <li class="nav__prod-item">
-                                    <a href="#" class="nav__prod-link">Accessories</a>
+                                    <a href="#" class="nav__prod-link">Kính Thời Trang</a>
                                 </li>
                             </ul>
                         </li>
                         <li class="nav__item">
-                            <a href="#" class="nav__link">
+                            <a href="about.html" class="nav__link">
                                 <span>
                                     GIỚI THIỆU
                                 </span>
                             </a>
                         </li>
                         <li class="nav__item">
-                            <a href="#" class="nav__link">
+                            <a href="members.html" class="nav__link">
                                 <span>
-                                    CỬA HÀNG
+                                    THÀNH VIÊN
                                 </span>
                             </a>
                         </li>
@@ -160,13 +163,13 @@
                         </li>
                     </ul>
                 </div>
-    
+
                 <div class="nav__shopping-cart">
                     <a href="#">
                         <i class="cart-mobile-icon fa fa-shopping-cart"></i>
                     </a>
                 </div>
-    
+
                 <div class="nav-pc nav-right">
                     <!-- <i class="nav-right__icon fa-solid fa-magnifying-glass"></i>
                     <i class="nav-right__icon fa-regular fa-user"></i>
@@ -197,10 +200,17 @@
                             <button type="button" id="btn-search">
                                 <i class="nav-right__icon fa fa-search"></i>
                             </button>
+
+                            <div id="search-rs" class="search-results">
+                                <h3 class="text-center">Kết quả tìm kiếm</h3>
+                                <hr>
+                                <div id="render-section"></div>
+                            </div>
+
                         </form>
                     </div>
                 </div>
-                
+
                 <div class="modal fade" id="myModal">
                     <div class="modal-dialog">
                         <div class="modal-content">
@@ -217,30 +227,33 @@
                                         <label class="modal-form-icon" for="fullName">
                                             <i class="fa fa-user"></i>
                                         </label>
-                                        <input style="width: 90%;" id="fullName" class="form-control" type="text" name="" placeholder="Họ tên">
-                                    </div>                    
+                                        <input style="width: 90%;" id="fullName" class="form-control" type="text"
+                                            name="" placeholder="Họ tên">
+                                    </div>
                                     <div class="form-group form-inline">
                                         <label class="modal-form-icon" for="phone1">
                                             <i class="fa fa-phone"></i>
                                         </label>
-                                        <input style="width: 40%;" id="phone1" class="form-control" 
-                                            type="tel" name="" placeholder="Số điện thoại">
+                                        <input style="width: 40%;" id="phone1" class="form-control" type="tel" name=""
+                                            placeholder="Số điện thoại">
                                         <label class="modal-form-icon" for="mail">
                                             <i class="fa fa-envelope mt-20" aria-hidden="true"></i>
                                         </label>
-                                        <input style="width: 40%;" id="mail" class="form-control" 
-                                            type="email" required placeholder="Email">
-                                    </div>       
+                                        <input style="width: 40%;" id="mail" class="form-control" type="email" required
+                                            placeholder="Email">
+                                    </div>
                                     <div class="form-group form-inline">
-                                        <label class="modal-form-icon" for="mess"><i class="fa fa-comment" aria-hidden="true"></i></label>                        
-                                        <textarea  style="width: 90%;" name="" id="mess" class="form-control"
-                                         rows="3" placeholder="Nội dung"></textarea>
-                                    </div>           
-                                    <button class="btn btn-muted btn-linear">Gửi phản hồi <i class="fa fa-plane submit-icon" aria-hidden="true"></i></button>    
+                                        <label class="modal-form-icon" for="mess"><i class="fa fa-comment"
+                                                aria-hidden="true"></i></label>
+                                        <textarea style="width: 90%;" name="" id="mess" class="form-control" rows="3"
+                                            placeholder="Nội dung"></textarea>
+                                    </div>
+                                    <button class="btn btn-muted btn-linear">Gửi phản hồi <i
+                                            class="fa fa-plane submit-icon" aria-hidden="true"></i></button>
                                 </form>
                             </div>
                             <div class="modal-footer">
-                              <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Close</button>
                             </div>
                         </div>
                     </div>
@@ -252,7 +265,7 @@
                         <i class="fa fa-chevron-circle-up" aria-hidden="true"></i>
                     </a>
                 </div>
-    
+
             </div>
         </div>
         <!-- End nav -->
@@ -274,7 +287,7 @@
 
             <div class="row container-lg">
                 <div class="col-xs-4 col-sm-4 col-md-3 col-lg-2">
-                    <h5 style="color: rgb(215, 22, 22);">DANH MỤC SẢN PHẨM</h5>
+                    <h5 style="color: #0091ff;">DANH MỤC SẢN PHẨM</h5>
 
                     <ul id="accordion" class="category__list">
                         <li class="category__item">
@@ -289,64 +302,69 @@
                         </li>
                         <ul id="collapseOne" class="category__sub-list collapse" data-bs-parent="#accordion">
                             <li class="category__sub-item">
-                                <a href="#" class="category__sub-link">Item</a>
+                                <a href="#" class="category__sub-link">Gọng kính tràn viền</a>
                             </li>
                             <li class="category__sub-item">
-                                <a href="#" class="category__sub-link">Item</a>
+                                <a href="#" class="category__sub-link">Gọng kính nửa viền</a>
                             </li>
                             <li class="category__sub-item">
-                                <a href="#" class="category__sub-link">Item</a>
+                                <a href="#" class="category__sub-link">Gọng kính không viền</a>
                             </li>
                         </ul>
 
                         <li class="category__item">
                             <a class="category__link collapsed" data-bs-toggle="collapse" href="#collapseTwo">
-                                Tròng Kính
+                                Kính thời trang
                                 <i class="fa-solid fa-chevron-down"></i>
                             </a>
                         </li>
                         <ul id="collapseTwo" class="category__sub-list collapse" data-bs-parent="#accordion">
                             <li class="category__sub-item">
-                                <a href="#" class="category__sub-link">Item</a>
+                                <a href="#" class="category__sub-link">Kính thời trang nam</a>
                             </li>
                             <li class="category__sub-item">
-                                <a href="#" class="category__sub-link">Item</a>
+                                <a href="#" class="category__sub-link">Kính thời trang nữ</a>
                             </li>
                             <li class="category__sub-item">
-                                <a href="#" class="category__sub-link">Item</a>
+                                <a href="#" class="category__sub-link">Kính thời trang unisex</a>
                             </li>
                         </ul>
 
                         <li class="category__item">
                             <a class="category__link collapsed" data-bs-toggle="collapse" href="#collapseThree">
-                                Kính Mát
+                                Kính Râm
                                 <i class="fa-solid fa-chevron-down"></i>
                             </a>
                         </li>
                         <ul id="collapseThree" class="category__sub-list collapse" data-bs-parent="#accordion">
                             <li class="category__sub-item">
-                                <a href="#" class="category__sub-link">Item</a>
+                                <a href="#" class="category__sub-link">Kính râm thể thao</a>
                             </li>
                             <li class="category__sub-item">
-                                <a href="#" class="category__sub-link">Item</a>
+                                <a href="#" class="category__sub-link">Kính râm cận</a>
                             </li>
                             <li class="category__sub-item">
-                                <a href="#" class="category__sub-link">Item</a>
+                                <a href="#" class="category__sub-link">Kính râm thời trang</a>
                             </li>
                         </ul>
                     </ul>
                 </div>
                 <div class="col-xs-8 col-sm-8 col-md-9 col-lg-10">
                     <div class="sort-filter">
-                            <span style="font-weight: 500;">Sắp xếp theo</span>
-                            <button class="sort-filter__item" type="button">Phổ Biến</button>
-                            <button class="sort-filter__item" type="button">Bán Chạy</button>
-                            <button class="sort-filter__item" type="button">Khuyến Mãi</button>
-                            <button class="sort-filter__item" type="button">Giá</button>
+                        <span style="font-weight: 500;" class="mx-2">Sắp xếp theo</span>
+                        <button class="sort-filter__item" type="button">Phổ Biến</button>
+                        <button class="sort-filter__item" type="button">Bán Chạy</button>
+                        <button class="sort-filter__item" type="button">Khuyến Mãi</button>
+                        <button class="sort-filter__item" type="button">Giá</button>
                     </div>
                     <!-- render product -->
                     <div id="productContainer" class="row product">
                     </div>
+                    <ul class="pagination justify-content-center">
+                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    </ul>
                 </div>
             </div>
 
@@ -366,7 +384,9 @@
                             </div>
                         </div>
                         <ul class="footer__list">
-                            <li style="text-align: justify;" class="footer__item">Mắt kính Gentle Monkey Tự hào là một trong những doanh nghiệp mắt kính lớn nhất và lâu đời nhất tại Sài Gòn, với đội ngũ KTV và nhân viên nhiệt tình phục vụ quý khách.</li>
+                            <li style="text-align: justify;" class="footer__item">Mắt kính Gentle Monkey Tự hào là một
+                                trong những doanh nghiệp mắt kính lớn nhất và lâu đời nhất tại Sài Gòn, với đội ngũ KTV
+                                và nhân viên nhiệt tình phục vụ quý khách.</li>
                             <li class="footer__item">
                                 <i class="fa-solid fa-location-dot mr-1"></i>
                                 12 Nguyễn Văn Bảo, Phường 4, Quận Gò Vấp, Tp. HCM
@@ -428,9 +448,11 @@
                     </div>
                     <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 mt-5">
                         <h4 style="text-indent: 12px;">ĐĂNG KÝ NHẬN TIN</h4>
-                        <p style="font-size: 1.4rem;color: #333;">Nhận thông tin sản phẩm mới nhất, tin khuyến mãi và nhiều hơn nữa.</p>
-                        
-                        <input type="email" name="" id="txtEmail" class="footer__form-control" required="required" placeholder="Nhập địa chỉ email của bạn">
+                        <p style="font-size: 1.4rem;color: #333;">Nhận thông tin sản phẩm mới nhất, tin khuyến mãi và
+                            nhiều hơn nữa.</p>
+
+                        <input type="email" name="" id="txtEmail" class="footer__form-control" required="required"
+                            placeholder="Nhập địa chỉ email của bạn">
                         <button type="button" class="btn footer__btn">ĐĂNG KÝ</button>
 
                         <div class="footer__social">
@@ -444,16 +466,18 @@
                         <p style="font-weight: 500; border-top: 2px solid gainsboro;" class="m-auto p-3 text-center">
                             Copyright ©2024 GENTLE MONKEY. Thực hiện bởi ...
                         </p>
-                      </div>
+                    </div>
                 </div>
             </div>
         </div>
         <!-- End footer -->
-        
+
 
     </div>
     <script src="../js/main.js"></script>
     <script src="../js/product-data.js"></script>
+    <script type="module" src="../js/home.js"></script>
     <script type="module" src="../js/product.js"></script>
 </body>
+
 </html>

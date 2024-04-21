@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/responsive.css">
     <link rel="stylesheet" href="../css/product-detail.css">
-    
+
 </head>
 
 <body>
@@ -57,18 +57,18 @@
 
                             <ul class="nav__prod--mobile p-0 none-list-style">
                                 <li class="nav__prod-item">
-                                    <a href="#" class="nav__prod-link">Glasses</a>
+                                    <a href="#" class="nav__prod-link">Kính Cận</a>
                                 </li>
                                 <li class="nav__prod-item">
-                                    <a href="#" class="nav__prod-link">Sunglasses</a>
+                                    <a href="#" class="nav__prod-link">Kính Râm</a>
                                 </li>
                                 <li class="nav__prod-item">
-                                    <a href="#" class="nav__prod-link">Accessories</a>
+                                    <a href="#" class="nav__prod-link">Kính Thời Trang</a>
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="about.html">
                                 <span>
                                     Giới thiệu
                                 </span>
@@ -76,9 +76,9 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#">
+                            <a href="members.html">
                                 <span>
-                                    Cửa hàng
+                                    Thành viên
                                 </span>
                                 <i class="fa-solid fa-store"></i>
                             </a>
@@ -130,27 +130,27 @@
 
                             <ul class="nav__prod--pc none-list-style">
                                 <li class="nav__prod-item">
-                                    <a href="#" class="nav__prod-link">Glasses</a>
+                                    <a href="#" class="nav__prod-link">Kinh Cận</a>
                                 </li>
                                 <li class="nav__prod-item">
-                                    <a href="#" class="nav__prod-link">Sunglasses</a>
+                                    <a href="#" class="nav__prod-link">Kính Râm</a>
                                 </li>
                                 <li class="nav__prod-item">
-                                    <a href="#" class="nav__prod-link">Accessories</a>
+                                    <a href="#" class="nav__prod-link">Kính Thời Trang</a>
                                 </li>
                             </ul>
                         </li>
                         <li class="nav__item">
-                            <a href="#" class="nav__link">
+                            <a href="about.html" class="nav__link">
                                 <span>
                                     GIỚI THIỆU
                                 </span>
                             </a>
                         </li>
                         <li class="nav__item">
-                            <a href="#" class="nav__link">
+                            <a href="members.html" class="nav__link">
                                 <span>
-                                    CỬA HÀNG
+                                    THÀNH VIÊN
                                 </span>
                             </a>
                         </li>
@@ -185,7 +185,7 @@
                             <span>|</span>
                             <li>
                                 <i class="nav-right__icon fa fa-user"></i>
-                                <a href="../html/home/login.html" id="dangNhapTK">Đăng nhập</a>
+                                <a href="../html/sign-in.html" id="dangNhapTK">Đăng nhập</a>
                             </li>
                             <span>|</span>
                             <li>
@@ -200,6 +200,13 @@
                             <button type="button" id="btn-search">
                                 <i class="nav-right__icon fa fa-search"></i>
                             </button>
+
+                            <div id="search-rs" class="search-results">
+                                <h3 class="text-center">Kết quả tìm kiếm</h3>
+                                <hr>
+                                <div id="render-section"></div>
+                            </div>
+
                         </form>
                     </div>
                 </div>
@@ -263,7 +270,7 @@
         </div>
         <!-- End nav -->
 
-        <div class="container-lg content">
+        <div class="container-lg content mb-0">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                     <div id="custCarousel" class="carousel slide" data-bs-ride="carousel" align="center">
@@ -303,18 +310,36 @@
                     <div class="prod-detail">
 
                     </div>
-                    <div class="row tools">
-                        <div class="quantity">
-                            <input type="button" value="-" class="qtyBtn minus">
-                            <input type="number" name="quantity" id="qtyVal" value="1" min="1" max step="1" inputmode="numeric" autocomplete="off">
-                            <input type="button" value="+" class="qtyBtn plus">
+                    <div class="tools">
+                        <div class="row add-cart-section">
+                            <div class="quantity">
+                                <input type="button" value="-" class="qtyBtn minus">
+                                <input type="number" name="quantity" id="qtyVal" value="1" min="1" max step="1"
+                                    inputmode="numeric" autocomplete="off">
+                                <input type="button" value="+" class="qtyBtn plus">
+                            </div>
+                            <div class="add-cart-btn">
+                                <input type="text" name="total-temp" value="" id="total-temp" readonly>
+                                <button type="button">
+                                    <i class="fa fa-shopping-cart"></i>
+                                    Thêm vào giỏ hàng
+                                </button>
+                            </div>
                         </div>
-                        <button class="buy-btn" type="button">Mua ngay</button>
-                        <button class="add-cart-btn" type="button">
-                            <i class="fa fa-shopping-cart"></i>
-                        </button>
+                        <div class="row w-100">
+                            <button class="buy-btn" type="button">Mua ngay</button>
+                        </div>
                     </div>
-
+                    <div style="font-size: 1.4rem;color: var(--text-color);" class="delivery-info mx-2 my-5">
+                        <p>
+                            <i class="fa-solid fa-truck-fast m-1"></i>
+                            Thời gian giao hàng ước tính: <strong>3 - 5</strong> ngày (Việt Nam)
+                        </p>
+                        <p>
+                            <i class="fa-solid fa-rotate m-2"></i>
+                            Miễn phí đổi trả với những sản phẩm lỗi do nhà sản xuất.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -422,6 +447,7 @@
     </div>
     <script src="../js/main.js"></script>
     <script src="../js/product-data.js"></script>
+    <script type="module" src="../js/home.js"></script>
     <script type="module" src="../js/product-detail.js"></script>
 </body>
 

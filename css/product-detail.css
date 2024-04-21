@@ -63,7 +63,7 @@
 
 .content .breadcrumb-item a {
     color: #000;
-}
+}   
 
 .content .breadcrumb-item a:hover {
     color: var(--breadcrumb-color);
@@ -79,57 +79,90 @@
 }
 
 /*  */
-.row.tools {
+.tools {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.add-cart-section {
+    width: 100%;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    margin-top: 50px;
 }
 
 .buy-btn {
-    width: 300px;
+    border-radius: 2px;
+    font-size: 1.4rem;
+    width: 100%;
     padding: 10px;
-    border: none;
-    outline: none;
     background-color: #000;
     color: #fff;
-    font-size: 1.4rem;
-    border-radius: 2px;
+    border: none;
+    outline: none;
     text-transform: uppercase;
 }
 
 .add-cart-btn {
-    width: 50px;
-    padding: 10px;
-    border: none;
-    outline: none;
-    background-color: #fff;
-    box-shadow: 0 0 20px #cecccc;
-    color: #000;
-    font-size: 1.4rem;
-    border-radius: 2px;
-    text-transform: uppercase;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    overflow: hidden;
+    display: inline-flex;
+    height: 42px;
 }
 
+#total-temp {
+    width: 100px;
+    border: none;
+    outline: none;
+    text-align: center;
+    font-size: 1.2rem;
+    background-color: #a5d5f5;
+}
+
+.add-cart-btn button {
+    border: none;
+    outline: none;
+    font-size: 1.4rem;
+    background-image: linear-gradient(to left, #a5d5f5, #c8ebf1, #a5d5f5);
+    border-left: 1px solid #eee;
+}
+
+.add-cart-btn i {
+    transition: ease-out .3s;
+}
+
+.add-cart-btn button:hover i {
+    transform: scale(1.2);
+    color: rgba(33, 67, 236, 0.701);
+    transition: ease-in .3s;
+}
 
 div.quantity {
     display: inline-flex;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
 }
 
 div.quantity input[type="button"] {
     padding: 0 5px;
-    min-width: 25px;
+    min-width: 35px;
     min-height: unset;
     height: 42px;
-    border: 1px solid #ccc;
     background: none;
     box-shadow: none;
+    border: none;
 }
 
 div.quantity input[type="number"] {
-    width: 30px;
+    width: 55px;
     border-radius: 0;
-    border: 1px solid #ccc;
+    border: none;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
     outline: none;
     padding: 0;
     text-align: center;
@@ -137,6 +170,8 @@ div.quantity input[type="number"] {
 
 div.quantity :is(input[type="number"],input[type="text"]) {
     height: 42px;
+    font-size: 1.2rem;
+    font-weight: 400;
 }
 
 div.quantity input[type=number]::-webkit-inner-spin-button, 

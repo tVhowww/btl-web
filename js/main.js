@@ -60,11 +60,6 @@ $(document).ready(function() {
     // tooltip
     $('[data-bs-toggle="tooltip"]').tooltip();   
 
-    // collapse
-    // $('#accordion').collapse({
-    //     toggle: false
-    //   })
-
     // Responsive nav mobile
     handelMobileNav()
 })

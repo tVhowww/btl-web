@@ -150,15 +150,30 @@ thumbnailItems.forEach(thumbnailItem => {
 
 //
 
+document.getElementById('total-temp').value = productArr[id - 1].price.replace(/\./g, ",") + " VND";
+
 const qtyBtns = document.querySelectorAll(".qtyBtn");
 const qtyValue = document.querySelector("#qtyVal");
 
+function calcTotal() {
+    var priceStr = productArr[id - 1].price;
+        var priceTmp = parseInt(priceStr.replace(/\./g, ""));
+        var total = qtyValue.value * priceTmp;
+        document.getElementById('total-temp').value = total.toLocaleString('en-US') + " VND";
+}
+
+qtyValue.addEventListener('change', () => {
+    calcTotal()
+})
+
 qtyBtns[0].addEventListener("click", () => {
-    if (qtyValue.value > 1)
+    if (qtyValue.value > 1) {
         qtyValue.value--;
+        calcTotal()
+    }
 })
 
 qtyBtns[1].addEventListener("click", () => {
     qtyValue.value++;
+    calcTotal()
 })
-

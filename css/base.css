@@ -1,10 +1,11 @@
 :root {
-    --primary-color: #53565a;
+    --primary-color: #333;
+    --secondary-color: #0091ff;
     --primary-color-hover: #90949aee;
     --while-color: #fff;
     --black-color: #000;
     --block-color: #f0f0f0;
-    --text-color: #333;
+    --text-color: #777;
     --breadcrumb-color: #6c757d;
     --border-color: #dbdbdb;
     --star-gold-color: #ffce3a;
@@ -64,3 +65,23 @@ html {
 
 }
     
+
+.breadcrumb {
+    padding: 10px;
+    font-size: 1.3rem;
+}
+
+.breadcrumb-item a {
+    color: #000;
+}
+
+.breadcrumb-item a:hover {
+    color: var(--breadcrumb-color);
+}
+
+.breadcrumb-item.active a {
+    color: var(--breadcrumb-color);
+    cursor: text;
+    text-decoration: none;
+}
+

@@ -1,0 +1,86 @@
+.banner {
+    background-image: url(../img/about-sec-1.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    min-height: 400px;
+    color: #fff;
+    display: flex;
+}
+
+.banner h1 {
+    font-size: 5rem;
+    text-align: center;
+    margin: auto;
+    text-shadow: 5px 5px 10px #595c5e;
+}
+
+.content .row p {
+    font-size: 1.8rem;
+    padding: 20px 25px 0;
+    text-align: justify;
+}
+
+.store-img {
+    min-width: 100px;
+    padding: 30px;
+}
+
+/* Sec-1 */
+.sec-one .row-one {
+    padding-top: 50;
+}
+
+.sec-one .col-two {
+    padding-top: 8%;
+}
+
+.sec-one .col-two h2 {
+    margin-bottom: 32px;
+}
+
+.sec-one h6 {
+    font-size: 1.3rem;
+}
+
+.sec-one p {
+    font-size: 1.8rem;
+}
+
+.sec-one .picture2 {
+    left: 35%;
+    top: 50%;
+}
+
+@media (max-width: 768px) {
+    .col-two {
+        margin-top: 400px;
+    }
+}
+
+/* Sec-2 */
+.sec-two p {
+    font-size: 1.8rem;
+}
+
+.sec-two .bgr {
+    background-color: #F5F5F5;
+    margin-top: 200px;
+}
+
+.sec-two .row-one {
+    padding-top: 96px;
+}
+
+.sec-two .row-three {
+    padding-bottom: 96px;
+}
+
+.sec-two .row-three a {
+    padding: 14px 28px;
+}
+
+@media (max-width: 992px) {
+    .sec-two .container-fluid {
+        margin-top: 96px;
+    }
+}

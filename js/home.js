@@ -91,4 +91,66 @@ function moveToDetail() {
             localStorage.setItem("category", cate);
         });
     });
-};
+}
+
+
+// Search
+
+const search = document.getElementById('search')
+const searchRs = document.getElementById('search-rs')
+const renderSection = document.getElementById('render-section')
+
+
+search.addEventListener('focus', function () {
+    searchRs.style.display = 'block'
+})
+
+document.body.addEventListener('click', function (event) {
+    if (event.target !== searchRs && event.target !== search && event.target !== renderSection) {
+        searchRs.style.display = 'none';
+    }
+});
+
+search.addEventListener('input', () => {
+    console.log(search.value);
+    handleShowResult(search.value);
+    moveSearchToDetail();
+})
+
+
+function moveSearchToDetail() {
+    const productList = document.querySelectorAll(".result-item");
+    productList.forEach((product) => {
+        product.addEventListener("click", () => {
+            localStorage.clear();
+            localStorage.setItem("id", product.id);
+        });
+    });
+}
+
+
+function handleShowResult(searchValue) {
+    const searchResults = productArr.filter((item) =>
+        item.name.toLowerCase().includes(searchValue.toLowerCase())
+    )
+    if (searchResults.length > 0) {
+        let renderUI = ""
+        searchResults.forEach((item) => {
+            renderUI += `<a class="result-item" href="product-detail.html" id="${item.id}">
+                                    <img class=result-img src="${item.image[0]}" alt="">
+                                    <div class="result-info">
+                                        <div class="prod-info">
+                                            <h5>${item.name}</h5>
+                                            <p>${item.category}</p>
+                                        </div>
+                                        <div class="prod-price">${item.price} VND</div>
+                                    </div>
+                                </a>`
+        })
+        renderSection.innerHTML = renderUI
+    } else {
+        renderSection.innerHTML = `<div class="no-result text-center">Không có kết quả tìm kiếm</div>`
+    }
+}
+
+

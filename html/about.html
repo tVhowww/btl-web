@@ -4,16 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang chủ</title>
+    <title>Giới thiệu</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <script src="../js/jquery-3.7.1.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="../fonts/fontawesome-free-6.5.1-web/css/all.min.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/responsive.css">
-    <script src="../js/product-data.js"></script>
+    <link rel="stylesheet" href="../css/about.css">
     <script type="module" src="../js/home.js"></script>
     <script src="../js/main.js"></script>
 </head>
@@ -271,179 +270,110 @@
         </div>
         <!-- End nav -->
 
-        <!-- Start carousel -->
-        <div class="container-lg mt-5">
-            <div id="carsl" class="carousel slide" data-bs-ride="carousel">
 
-                <!-- Indicator/dots -->
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carsl" data-bs-slide-to="0" class="active"></button>
-                    <button type="button" data-bs-target="#carsl" data-bs-slide-to="1"></button>
-                    <button type="button" data-bs-target="#carsl" data-bs-slide-to="2"></button>
-                </div>
-
-                <!-- The slideshow/carousel -->
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="../img/slide1.png" alt="Slide1" class="d-block">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="../img/slide2.jpg" alt="Slide2" class="d-block">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="../img/slide3.jpg" alt="Slide3" class="d-block">
-                        <div style="z-index: 1;" class="carousel-caption">
-                            <h1>GENTLE MONKEY</h1>
-                            <p>Dẫn đầu xu hướng</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Left and right controls/icons -->
-                <a class="carousel-control-prev" data-bs-target="#carsl" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                </a>
-                <a class="carousel-control-next" data-bs-target="#carsl" data-bs-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                </a>
+        <div class="container-lg p-0">
+            <div class="banner">
+                <h1>Giới thiệu Gentle Monkey</h1>
             </div>
-        </div>
-        <!-- End carousel -->
+            <section class="content">
+                <ul class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="home.html">Trang chủ</a>
+                    </li>
+                    <li class="breadcrumb-item active">
+                        <a href="#">Giới thiệu</a>
+                    </li>
+                </ul>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 sol-md-7 col-lg-7">
+                        <p class="text-muted"><strong>Gentle Monkey</strong> là một trang web bán mắt kính trực tuyến,
+                            mang lại cho doanh
+                            nghiệp và khách hàng cơ hội tiện lợi để mua và bán các sản phẩm kính mắt. Với việc truy cập
+                            vào trang web này, người dùng có thể dễ dàng tìm kiếm thông tin về các loại kính mắt, xem
+                            các mẫu mới nhất và thậm chí đặt hàng trực tuyến ngay từ nhà.
 
-        <!-- Start category -->
-        <div class="container-lg category mt-5">
-            <div class="category__heading text-center mb-5">
-                <h1 class="mb-4">DANH MỤC NỔI BẬT</h1>
-                <p style="font-size: 1.4rem;font-weight: lighter;">Sở hữu ngay mắt kính chất lượng giá tốt chỉ từ
-                    <span style="font-size: 1.8rem;color: #0091ff; font-weight: 500;">2.000</span>
-                    <i style="font-size: 1rem;">USD</i>
-                </p>
-            </div>
-
-            <ul class="category-list row">
-                <li class="category-item col-xs-6 col-sm-4 col-2-4">
-                    <a href="#" class="category-link">
-                        <div class="category-link__content">
-                            <div class="category-link__img">
-                                <img src="../img/category-banner1.webp" alt="">
-                            </div>
-                            <div class="category-link__title">
-                                <h5>Kính thời trang</h5>
-                                Xem ngay
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li class="category-item col-xs-6 col-sm-4 col-2-4">
-                    <a href="#" class="category-link">
-                        <div class="category-link__content">
-                            <div class="category-link__img">
-                                <img src="../img/category-banner2.webp" alt="">
-                            </div>
-                            <div class="category-link__title">
-                                <h5>Kính cận</h5>
-                                Xem ngay
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li class="category-item col-xs-6 col-sm-4 col-2-4">
-                    <a href="#" class="category-link">
-                        <div class="category-link__content">
-                            <div class="category-link__img">
-                                <img src="../img/category-banner3.webp" alt="">
-                            </div>
-                            <div class="category-link__title">
-                                <h5>Kính râm</h5>
-                                Xem ngay
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li class="category-item col-xs-6 col-sm-4 col-2-4">
-                    <a href="#" class="category-link">
-                        <div class="category-link__content">
-                            <div class="category-link__img">
-                                <img src="../img/category-banner4.webp" alt="">
-                            </div>
-                            <div class="category-link__title">
-                                <h5>Khuyến mãi</h5>
-                                Xem ngay
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li class="category-item col-xs-6 col-sm-4 col-2-4">
-                    <a href="#" class="category-link">
-                        <div class="category-link__content">
-                            <div class="category-link__img">
-                                <img src="../img/category-banner5.webp" alt="">
-                            </div>
-                            <div class="category-link__title">
-                                <h5>Hệ thống</h5>
-                                Xem ngay
-                            </div>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-
-        </div>
-        <!-- End category -->
-
-
-        <!-- Start product -->
-        <div class="container-lg mt-5">
-            <h1 class="product-heading text-center mb-5">
-                SẢN PHẨM NỔI BẬT
-            </h1>
-
-            <ul class="category-nav__list">
-                <li class="category-nav__item">
-                    <a href="" class="category-nav__link active">
-                        Kính Cận
-                    </a>
-                </li>
-                <li class="category-nav__item">
-                    <a href="" class="category-nav__link">
-                        Kính Râm
-                    </a>
-                </li>
-                <li class="category-nav__item">
-                    <a href="" class="category-nav__link">
-                        Kính Thời Trang
-                    </a>
-                </li>
-            </ul>
-
-            <div class="row product">
-                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-                    <a href="#">
-                        <img style="min-height: 350px;margin-bottom: 20px;" width="100%" src="../img/product-banner.png"
-                            alt="">
-                    </a>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
-                    <!-- render data -->
-                    <div id="productContainerHome" class="row">
-
+                        <p class="text-muted">
+                            Nhờ vào sự tiện lợi và đa dạng của Gentle Monkey, việc mua sắm kính mắt trực tuyến trở nên
+                            đơn giản hơn bao giờ hết, đồng thời giúp người dùng tiết kiệm thời gian và năng lượng so với
+                            việc phải đến các cửa hàng truyền thống.
+                        </p>
+                        </p>
                     </div>
-
-                    <div class="row text-center">
-                        <a class="view-all" href="../html/product.html">
-                            Xem tất cả
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                    </div>
-
+                    <img class="col-xs-12 col-sm-6 sol-md-5 col-lg-5 store-img" src="../img/store-img.jpg" alt="Store">
                 </div>
-            </div>
 
+            </section>
+            <!-- sec-1 -->
+            <section class="sec-one">
+                <div class="container container-custom">
+                    <div class="row justify-content-between row-one">
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                            <div class="p-3 m-0 border-0 bd-example bd-example-zindex-levels position-relative">
+                                <div class="z-n1 position-absolute border-0 w-50 bg-transparent">
+                                    <img src="../img/about-sec-2.jpg" alt="" class="w-100">
+                                </div>
+                                <div class="z-0 position-absolute border-0 w-50 bg-transparent picture2">
+                                    <img src="../img/about-sec-2.avif" alt="" class="w-100">
+                                </div>
+                            </div>
+                        </div>
 
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5 col-xl-5 col-two">
+                            <h6 class="mb-3 text-black-50">CÂU CHUYỆN CỦA CHÚNG TÔI</h6>
+                            <h2>VỀ CỬA HÀNG CỦA CHÚNG TÔI</h2>
+                            <p class="text-muted">
+                                Không chỉ là một cửa hàng thay thế cho việc mua sắm truyền thống, Gentle Monkey còn mang
+                                lại
+                                sự linh hoạt và thuận tiện không giới hạn về vị trí địa lý hoặc thời gian. Khách hàng có
+                                thể
+                                thoải mái duyệt qua các mẫu kính mắt từ bất kỳ đâu và mua sắm vào bất kỳ thời điểm nào
+                                trong
+                                ngày, chỉ với vài cú nhấp chuột.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- sec-2 -->
+            <section class="sec-two">
+                <div class="container-fluid bgr">
+                    <div class="container container-custom">
+                        <div class="row row-one">
+                            <div class="col-12">
+                                <h1 class="text-center mb-5">Gentle Monkey</h1>
+                            </div>
+                        </div>
+
+                        <div class="row justify-content-center mt-3">
+                            <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
+                                <p>Ở đại dương, cá voi là những sinh vật lớn mạnh, biểu tượng của sức sống và sự mênh
+                                    mông của biển cả. Tương tự như vậy, "Gentle Monkey" là nơi mà sự sáng tạo bắt đầu,
+                                    mang lại cho bạn sự lựa chọn đa dạng về kính mắt để thể hiện phong cách và cá nhân
+                                    của bạn.</p>
+                                <p>Như những quả xanh mát lấp lánh giữa bầu trời, các mẫu kính mắt tại "Gentle Monkey"
+                                    không chỉ là phụ kiện thời trang, mà còn là điểm nhấn tinh tế cho vẻ ngoài của bạn.
+                                    Với sự xuất hiện của chúng, bạn sẽ tự tin và ấn tượng.</p>
+                            </div>
+                            <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
+                                <p>"Male was. Itself." - Tự tin và độc đáo, mỗi mẫu kính mắt tại "Gentle Monkey" là một
+                                    tuyên bố về phong cách và cá nhân của bạn. Chúng được tạo ra để bạn tự tin bước đi
+                                    và thể hiện bản thân mình.</p>
+                                <p>Và trong không gian mua sắm trực tuyến này, bạn sẽ trở thành nhà sáng tạo, chủ nhân
+                                    của phong cách riêng của mình. Hãy khám phá "Gentle Monkey" ngay hôm nay và tạo ra
+                                    diện mạo mới cho bản thân!</p>
+                            </div>
+                        </div>
+
+                        <div class="row mt-5 row-three">
+                            <div class="col-12 text-center">
+                                <a href="product.html" class="btn btn-dark rounded-0"><b>Mua sắm ngay</b><i
+                                        class="fa-solid fa-arrow-right mx-2"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
-
-        <!-- End product -->
-
 
         <!-- Start footer -->
         <div class="footer">
@@ -544,10 +474,7 @@
                 </div>
             </div>
         </div>
-
         <!-- End footer -->
-
-
     </div>
 </body>
 

@@ -4,23 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trang chủ</title>
+    <title>Thành viên</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <script src="../js/jquery-3.7.1.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
-    <script src="../js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="../fonts/fontawesome-free-6.5.1-web/css/all.min.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/responsive.css">
-    <script src="../js/product-data.js"></script>
+    <link rel="stylesheet" href="../css/members.css">
     <script type="module" src="../js/home.js"></script>
     <script src="../js/main.js"></script>
 </head>
 
 <body>
     <div id="main">
-        <!-- Start nav -->
+         <!-- Start nav -->
         <div class="container-lg mb-90">
             <div class="fixed-top" id="nav">
                 <div class="nav-left">
@@ -271,179 +270,40 @@
         </div>
         <!-- End nav -->
 
-        <!-- Start carousel -->
-        <div class="container-lg mt-5">
-            <div id="carsl" class="carousel slide" data-bs-ride="carousel">
 
-                <!-- Indicator/dots -->
-                <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carsl" data-bs-slide-to="0" class="active"></button>
-                    <button type="button" data-bs-target="#carsl" data-bs-slide-to="1"></button>
-                    <button type="button" data-bs-target="#carsl" data-bs-slide-to="2"></button>
-                </div>
-
-                <!-- The slideshow/carousel -->
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="../img/slide1.png" alt="Slide1" class="d-block">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="../img/slide2.jpg" alt="Slide2" class="d-block">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="../img/slide3.jpg" alt="Slide3" class="d-block">
-                        <div style="z-index: 1;" class="carousel-caption">
-                            <h1>GENTLE MONKEY</h1>
-                            <p>Dẫn đầu xu hướng</p>
+        <div class="container-lg">
+            <section class="content">
+                <div class="team-members">
+                    <h1 class="text-center text-info">THÀNH VIÊN THỰC HIỆN</h1>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                <div class="card border-0">
+                                    <div class="card-img">
+                                        <img class="card-img-top" src="../img/img_avatar.png" alt="">
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title p-0">Nguyễn Trung Hậu</h5>
+                                        <p class="card-text p-0 text-center">MSSV: 22660241</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                <div class="card border-0">
+                                    <div class="card-img">
+                                        <img class="card-img-top" src="../img/img_avatar.png" alt="">
+                                    </div>
+                                    <div class="card-body">
+                                        <h5 class="card-title p-0">Hồ Minh Hưng</h5>
+                                        <p class="card-text p-0 text-center">MSSV: 22666391</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Left and right controls/icons -->
-                <a class="carousel-control-prev" data-bs-target="#carsl" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon"></span>
-                </a>
-                <a class="carousel-control-next" data-bs-target="#carsl" data-bs-slide="next">
-                    <span class="carousel-control-next-icon"></span>
-                </a>
-            </div>
+            </section>
         </div>
-        <!-- End carousel -->
-
-        <!-- Start category -->
-        <div class="container-lg category mt-5">
-            <div class="category__heading text-center mb-5">
-                <h1 class="mb-4">DANH MỤC NỔI BẬT</h1>
-                <p style="font-size: 1.4rem;font-weight: lighter;">Sở hữu ngay mắt kính chất lượng giá tốt chỉ từ
-                    <span style="font-size: 1.8rem;color: #0091ff; font-weight: 500;">2.000</span>
-                    <i style="font-size: 1rem;">USD</i>
-                </p>
-            </div>
-
-            <ul class="category-list row">
-                <li class="category-item col-xs-6 col-sm-4 col-2-4">
-                    <a href="#" class="category-link">
-                        <div class="category-link__content">
-                            <div class="category-link__img">
-                                <img src="../img/category-banner1.webp" alt="">
-                            </div>
-                            <div class="category-link__title">
-                                <h5>Kính thời trang</h5>
-                                Xem ngay
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li class="category-item col-xs-6 col-sm-4 col-2-4">
-                    <a href="#" class="category-link">
-                        <div class="category-link__content">
-                            <div class="category-link__img">
-                                <img src="../img/category-banner2.webp" alt="">
-                            </div>
-                            <div class="category-link__title">
-                                <h5>Kính cận</h5>
-                                Xem ngay
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li class="category-item col-xs-6 col-sm-4 col-2-4">
-                    <a href="#" class="category-link">
-                        <div class="category-link__content">
-                            <div class="category-link__img">
-                                <img src="../img/category-banner3.webp" alt="">
-                            </div>
-                            <div class="category-link__title">
-                                <h5>Kính râm</h5>
-                                Xem ngay
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li class="category-item col-xs-6 col-sm-4 col-2-4">
-                    <a href="#" class="category-link">
-                        <div class="category-link__content">
-                            <div class="category-link__img">
-                                <img src="../img/category-banner4.webp" alt="">
-                            </div>
-                            <div class="category-link__title">
-                                <h5>Khuyến mãi</h5>
-                                Xem ngay
-                            </div>
-                        </div>
-                    </a>
-                </li>
-                <li class="category-item col-xs-6 col-sm-4 col-2-4">
-                    <a href="#" class="category-link">
-                        <div class="category-link__content">
-                            <div class="category-link__img">
-                                <img src="../img/category-banner5.webp" alt="">
-                            </div>
-                            <div class="category-link__title">
-                                <h5>Hệ thống</h5>
-                                Xem ngay
-                            </div>
-                        </div>
-                    </a>
-                </li>
-            </ul>
-
-        </div>
-        <!-- End category -->
-
-
-        <!-- Start product -->
-        <div class="container-lg mt-5">
-            <h1 class="product-heading text-center mb-5">
-                SẢN PHẨM NỔI BẬT
-            </h1>
-
-            <ul class="category-nav__list">
-                <li class="category-nav__item">
-                    <a href="" class="category-nav__link active">
-                        Kính Cận
-                    </a>
-                </li>
-                <li class="category-nav__item">
-                    <a href="" class="category-nav__link">
-                        Kính Râm
-                    </a>
-                </li>
-                <li class="category-nav__item">
-                    <a href="" class="category-nav__link">
-                        Kính Thời Trang
-                    </a>
-                </li>
-            </ul>
-
-            <div class="row product">
-                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
-                    <a href="#">
-                        <img style="min-height: 350px;margin-bottom: 20px;" width="100%" src="../img/product-banner.png"
-                            alt="">
-                    </a>
-                </div>
-                <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
-                    <!-- render data -->
-                    <div id="productContainerHome" class="row">
-
-                    </div>
-
-                    <div class="row text-center">
-                        <a class="view-all" href="../html/product.html">
-                            Xem tất cả
-                            <i class="fa-solid fa-arrow-right"></i>
-                        </a>
-                    </div>
-
-                </div>
-            </div>
-
-
-        </div>
-
-        <!-- End product -->
-
 
         <!-- Start footer -->
         <div class="footer">
@@ -544,10 +404,7 @@
                 </div>
             </div>
         </div>
-
         <!-- End footer -->
-
-
     </div>
 </body>
 

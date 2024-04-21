@@ -2,7 +2,7 @@ const productArr = [
     {
         id: 1,
         name: "Kính Gentle Monkey Benven 01",
-        category: "Kính Râm",
+        category: "Kính Thời Trang",
         image: ["../img/prod1.webp", "../img/prod1-1.webp",
             "../img/prod1-2.webp", "../img/prod1-3.webp", "../img/prod1-4.webp"],
         price: "6.790.000",
@@ -14,7 +14,7 @@ const productArr = [
     {
         id: 2,
         name: "Kính Gentle Monkey Bandoneon.S 01",
-        category: "Kính Râm",
+        category: "Kính Thời Trang",
         image: ["../img/prod2.webp", "../img/prod2-1.webp",
             "../img/prod2-2.webp", "../img/prod2-3.webp", "../img/prod2-4.webp"],
         price: "8.090.000",
@@ -26,7 +26,7 @@ const productArr = [
     {
         id: 3,
         name: "Kính Gentle Monkey Benven CR7",
-        category: "Kính Râm",
+        category: "Kính Thời Trang",
         image: ["../img/prod3.webp", "../img/prod3-1.webp",
             "../img/prod3-2.webp", "../img/prod3-3.webp", "../img/prod3-4.webp"],
         price: "6.790.000",
@@ -38,7 +38,7 @@ const productArr = [
     {
         id: 4,
         name: "Kính Gentle Monkey Braid M01",
-        category: "Kính Râm",
+        category: "Kính Thời Trang",
         image: ["../img/prod4.jpg", "../img/prod4-1.jpg",
             "../img/prod4-2.jpg", "../img/prod4-3.jpg", "../img/prod4-4.jpg"],
         price: "7.690.000",
@@ -50,7 +50,7 @@ const productArr = [
     {
         id: 5,
         name: "Kính Gentle Monkey Gelati MG4",
-        category: "Kính Râm",
+        category: "Kính Thời Trang",
         image: ["../img/prod5.webp", "../img/prod5-1.webp",
             "../img/prod5-2.webp", "../img/prod5-3.webp", "../img/prod5-4.webp"],
         price: "7.390.000",
@@ -62,7 +62,7 @@ const productArr = [
     {
         id: 6,
         name: "Kính Gentle Monkey Nada WC3",
-        category: "Kính Râm",
+        category: "Kính Thời Trang",
         image: ["../img/prod6.jpg", "../img/prod6-1.jpg",
             "../img/prod6-2.jpg", "../img/prod6-3.jpg", "../img/prod6-4.jpg"],
         price: "5.790.000",
@@ -74,7 +74,7 @@ const productArr = [
     {
         id: 7,
         name: "Kính Gentle Monkey Rosy 01",
-        category: "Kính Râm",
+        category: "Kính Thời Trang",
         image: ["../img/prod7.webp", "../img/prod7-1.jpg",
             "../img/prod7-2.jpg", "../img/prod7-3.jpg", "../img/prod7-4.jpg"],
         price: "5.590.000",
@@ -86,7 +86,7 @@ const productArr = [
     {
         id: 8,
         name: "Kính Gentle Monkey Tambu YC6",
-        category: "Kính Râm",
+        category: "Kính Thời Trang",
         image: ["../img/prod8.jpg", "../img/prod8-1.jpg",
             "../img/prod8-2.jpg", "../img/prod8-3.jpg"],
         price: "6.490.000",
@@ -98,7 +98,7 @@ const productArr = [
     {
         id: 9,
         name: "Kính Gentle Monkey Umber BLC7",
-        category: "Kính Râm",
+        category: "Kính Thời Trang",
         image: ["../img/prod9.webp", "../img/prod9-1.webp",
             "../img/prod9-2.webp", "../img/prod9-3.webp", "../img/prod9-4.webp"],
         price: "7.690.000",
@@ -110,7 +110,7 @@ const productArr = [
     {
         id: 10,
         name: "Kính Gentle Monkey Vis Viva BL2",
-        category: "Kính Râm",
+        category: "Kính Thời Trang",
         image: ["../img/prod10.jpg", "../img/prod10-1.jpg",
             "../img/prod10-2.jpg", "../img/prod10-3.jpg", "../img/prod10-4.jpg"],
         price: "6.790.000",
@@ -215,6 +215,90 @@ const productArr = [
         lensColor: "Trong suốt",
         material: "Nhựa acetate & Titan",
         function: "Chống ánh sáng xanh, tia cực tím 99.9%"
+    },
+    {
+        id: 19,
+        name: "Kính Gentle Monkey CL40104I Trắng",
+        category: "Kính Râm",
+        image: ["../img/prod19.webp", "../img/prod19-1.webp",
+            "../img/prod19-2.webp", "../img/prod19-3.webp"],
+        price: "5.990.000",
+        frameColor: "Trắng",
+        lensColor: "Khói",
+        material: "Nhựa acetate",
+        function: "Chống 99.9% tia UV"
+    },
+    {
+        id: 20,
+        name: "Kính Gentle Monkey Swift Oval Đen",
+        category: "Kính Râm",
+        image: ["../img/prod20.webp", "../img/prod20-1.webp",
+            "../img/prod20-2.webp", "../img/prod20-3.webp", "../img/prod20-4.webp", "../img/prod20-5.webp"],
+        price: "6.390.000",
+        frameColor: "Đen",
+        lensColor: "Đen",
+        material: "Nhựa acetate",
+        function: "Chống tia UVA/UVB tới 100%"
+    },
+    {
+        id: 21,
+        name: "Kính Gentle Monkey Swift Oval Đen",
+        category: "Kính Râm",
+        image: ["../img/prod21.webp", "../img/prod21-1.webp",
+            "../img/prod21-2.webp", "../img/prod21-3.webp", "../img/prod21-4.webp", "../img/prod21-5.webp"],
+        price: "8.390.000",
+        frameColor: "Vàng",
+        lensColor: "Xanh",
+        material: "Titanium",
+        function: "Chống 99.9% tia UV"
+    },
+    {
+        id: 22,
+        name: "Kính Gentle Monkey Swift Oval Đen",
+        category: "Kính Râm",
+        image: ["../img/prod22.webp", "../img/prod22-1.jpg",
+            "../img/prod22-2.jpg", "../img/prod22-3.jpg", "../img/prod22-4.jpg"],
+        price: "5.690.000",
+        frameColor: "Đen",
+        lensColor: "Đen",
+        material: "Nhựa acetate",
+        function: "Chống ánh sáng xanh, tia cực tím 99.9%"
+    },
+    {
+        id: 23,
+        name: "Kính Gentle Monkey Swift Oval Đen",
+        category: "Kính Râm",
+        image: ["../img/prod23.jpg", "../img/prod23-1.jpg",
+            "../img/prod23-2.jpg", "../img/prod23-3.jpg", "../img/prod23-4.jpg", "../img/prod23-5.jpg"],
+        price: "6.190.000",
+        frameColor: "Đen",
+        lensColor: "Đen",
+        material: "Nhựa acetate",
+        function: "Chống ánh sáng xanh, tia cực tím 99.9%"
+    },
+    {
+        id: 24,
+        name: "Kính Gentle Monkey Zodiac 02(Y)",
+        category: "Kính Râm",
+        image: ["../img/prod24.webp", "../img/prod24-1.webp",
+            "../img/prod24-2.webp", "../img/prod24-3.webp", "../img/prod24-4.webp"],
+        price: "8.590.000",
+        frameColor: "Đen",
+        lensColor: "Vàng",
+        material: "Titan",
+        function: "Chống ánh sáng xanh, tia cực tím 99.9%"
+    },
+    {
+        id: 25,
+        name: "Kính Gentle Monkey Austin Đồi Mồi",
+        category: "Kính Râm",
+        image: ["../img/prod25.webp", "../img/prod25-1.webp",
+            "../img/prod25-2.webp", "../img/prod25-3.webp", "../img/prod25-4.webp"],
+        price: "8.590.000",
+        frameColor: "Đồi mồi",
+        lensColor: "Nâu",
+        material: "Acetate",
+        function: "Chống tia UVA/UVB tới 99,9%"
     }
 ];
 

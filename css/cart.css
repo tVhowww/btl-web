@@ -1,0 +1,104 @@
+.banner {
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner h3 {
+    font-size: 2.4rem;
+}
+
+.breadcrumb {
+    background-color: #fff;
+
+}
+
+.table {
+    font-size: 1.6rem;
+    margin-bottom: 30px;
+}
+
+.table td {
+    
+    vertical-align: middle;
+}
+
+.table td img {
+    max-width: 100px;
+}
+
+
+div.quantity {
+    display: inline-flex;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+div.quantity input[type="button"] {
+    padding: 0 5px;
+    min-width: 25px;
+    min-height: unset;
+    height: 42px;
+    background: none;
+    box-shadow: none;
+    border: none;
+}
+
+div.quantity input[type="button"]:hover {
+    background-color: #ccc;
+}
+
+div.quantity input[type="number"] {
+    width: 35px;
+    border-radius: 0;
+    border: none;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    outline: none;
+    padding: 0;
+    text-align: center;
+}
+
+
+div.quantity :is(input[type="number"]){
+    height: 42px;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+div.quantity input[type=number]::-webkit-inner-spin-button, 
+div.quantity input[type=number]::-webkit-outer-spin-button, 
+div.quantity input[type="number"] {
+    margin: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.cart-total-wrap {
+    border: 2px solid var(--border-color);
+    padding: 25px 20px;
+}
+
+.cart-total .row {
+    padding: 30px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.8rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.cart-total .row:last-child {
+    border: none;
+}
+
+.cart-total-wrap button {
+    margin-top: 10px;
+    padding: 10px 0;
+    font-size: 1.7rem;
+    background-color: #0083cb;
+}

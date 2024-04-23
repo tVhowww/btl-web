@@ -4,22 +4,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sản phẩm</title>
+    <title>Tài khoản</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <script src="../js/jquery-3.7.1.min.js"></script>
-    <!-- <script src="../js/bootstrap.min.js"></script> -->
-    <script src="../js/bootstrap.bundle.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/main.js"></script>
     <link rel="stylesheet" href="../fonts/fontawesome-free-6.5.1-web/css/all.min.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/responsive.css">
-    <link rel="stylesheet" href="../css/product.css">
-
+    <link rel="stylesheet" href="../css/information.css">
+    <script src="../js/information.js"></script>
 </head>
 
 <body>
     <div id="main">
-         <!-- Start nav -->
+        <!-- Start nav -->
         <div class="container-lg mb-90">
             <div class="fixed-top" id="nav">
                 <div class="nav-left">
@@ -190,7 +190,7 @@
                             <span>|</span>
                             <li>
                                 <i class="nav-right__icon fa fa-shopping-cart"></i>
-                                <a href="cart.html">Giỏ hàng</a>
+                                <a href="#">Giỏ hàng</a>
                             </li>
                         </ul>
                     </div>
@@ -270,106 +270,45 @@
         </div>
         <!-- End nav -->
 
-        <div class="container-lg">
-            <div class="banner">
-                <img src="../img/slide5-root.jpg" alt="">
-                <h1>SẢN PHẨM</h1>
-            </div>
-
-            <ul class="breadcrumb">
-                <li class="breadcrumb-item">
-                    <a href="home.html">Trang chủ</a>
-                </li>
-                <li class="breadcrumb-item active">
-                    Sản phẩm
-                </li>
-            </ul>
-
-            <div class="row container-lg">
-                <div class="col-xs-4 col-sm-4 col-md-3 col-lg-2">
-                    <h5 style="color: #0091ff;">DANH MỤC SẢN PHẨM</h5>
-
-                    <ul id="accordion" class="category__list">
-                        <li class="category__item">
-                            <a href="" class="category__link active">Tất Cả Sản Phẩm</a>
+        <section>
+            <div class="container">
+                <div class="banner">
+                    <h3>Thông tin tài khoản</h3>
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item">
+                            <a href="home.html">Trang chủ</a>
                         </li>
-
-                        <li class="category__item">
-                            <a class="category__link" data-bs-toggle="collapse" href="#collapseOne">
-                                Gọng Kính Cận
-                                <i class="fa-solid fa-chevron-down"></i>
-                            </a>
+                        <li class="breadcrumb-item active">
+                            <a href="#">Thông tin tài khoản</a>
                         </li>
-                        <ul id="collapseOne" class="category__sub-list collapse" data-bs-parent="#accordion">
-                            <li class="category__sub-item">
-                                <a href="#" class="category__sub-link">Gọng kính tràn viền</a>
-                            </li>
-                            <li class="category__sub-item">
-                                <a href="#" class="category__sub-link">Gọng kính nửa viền</a>
-                            </li>
-                            <li class="category__sub-item">
-                                <a href="#" class="category__sub-link">Gọng kính không viền</a>
-                            </li>
-                        </ul>
-
-                        <li class="category__item">
-                            <a class="category__link collapsed" data-bs-toggle="collapse" href="#collapseTwo">
-                                Kính thời trang
-                                <i class="fa-solid fa-chevron-down"></i>
-                            </a>
-                        </li>
-                        <ul id="collapseTwo" class="category__sub-list collapse" data-bs-parent="#accordion">
-                            <li class="category__sub-item">
-                                <a href="#" class="category__sub-link">Kính thời trang nam</a>
-                            </li>
-                            <li class="category__sub-item">
-                                <a href="#" class="category__sub-link">Kính thời trang nữ</a>
-                            </li>
-                            <li class="category__sub-item">
-                                <a href="#" class="category__sub-link">Kính thời trang unisex</a>
-                            </li>
-                        </ul>
-
-                        <li class="category__item">
-                            <a class="category__link collapsed" data-bs-toggle="collapse" href="#collapseThree">
-                                Kính Râm
-                                <i class="fa-solid fa-chevron-down"></i>
-                            </a>
-                        </li>
-                        <ul id="collapseThree" class="category__sub-list collapse" data-bs-parent="#accordion">
-                            <li class="category__sub-item">
-                                <a href="#" class="category__sub-link">Kính râm thể thao</a>
-                            </li>
-                            <li class="category__sub-item">
-                                <a href="#" class="category__sub-link">Kính râm cận</a>
-                            </li>
-                            <li class="category__sub-item">
-                                <a href="#" class="category__sub-link">Kính râm thời trang</a>
-                            </li>
-                        </ul>
                     </ul>
                 </div>
-                <div class="col-xs-8 col-sm-8 col-md-9 col-lg-10">
-                    <div class="sort-filter">
-                        <span style="font-weight: 500;" class="mx-2">Sắp xếp theo</span>
-                        <button class="sort-filter__item" type="button">Phổ Biến</button>
-                        <button class="sort-filter__item" type="button">Bán Chạy</button>
-                        <button class="sort-filter__item" type="button">Khuyến Mãi</button>
-                        <button class="sort-filter__item" type="button">Giá</button>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="account-dashboard">
+                            <a href="#" class="active">Bảng điều khiển</a>
+                            <a href="address.html">Địa chỉ của tôi</a>
+                            <a href="cart.html">Danh sách sản phẩm trong giỏ hàng</a>
+                            <a href="#">Đăng xuất</a>
+                        </div>
                     </div>
-                    <!-- render product -->
-                    <div id="toastr"></div>
-                    <div id="productContainer" class="row product">
+                    <div class="col-md-9 border-left">
+                        <div class="mb-5">
+                            <span>Chào mừng <strong>Hau</strong>!</span>
+                            <span>(Không phải? <a href="#">Đăng xuất</a>)</span>
+                        </div>
+                        <div class="info-detail">
+                            <h4 class="mb-3">Chi tiết tài khoản</h4>
+                            <table class="table table-bordered">
+                                <tbody id="tbl">
+                                    
+                                </tbody>
+                            </table>
+                        </div>
                     </div>
-                    <ul class="pagination justify-content-center">
-                        <li class="page-item active"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                    </ul>
                 </div>
             </div>
-
-        </div>
+        </section>
 
 
         <!-- Start footer -->
@@ -472,13 +411,7 @@
             </div>
         </div>
         <!-- End footer -->
-
-
     </div>
-    <script src="../js/main.js"></script>
-    <script src="../js/product-data.js"></script>
-    <script type="module" src="../js/home.js"></script>
-    <script type="module" src="../js/product.js"></script>
 </body>
 
 </html>

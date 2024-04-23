@@ -1,0 +1,99 @@
+.banner {
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner h3 {
+    font-size: 2.4rem;
+}
+
+.breadcrumb {
+    background-color: #fff;
+
+}
+.account-dashboard {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.account-dashboard a {
+    display: block;
+    border-bottom: 1px solid var(--border-color);
+    color: #333;
+    padding: 10px 10px 10px 20px;
+    font-size: 1.4rem;
+}
+
+.account-dashboard a:hover {
+    text-decoration: none;
+    opacity: 0.9;
+}
+
+.account-dashboard a:last-child {
+    border-bottom: none;
+}
+
+.account-dashboard a.active {
+    background-color: lightgray;
+    font-weight: 600;
+}
+
+.border-left {
+    border-left: 1px solid var((--border-color));
+}
+
+.col-md-9 span {
+    font-size: 1.3rem;
+}
+
+.col-md-9 span a {
+    color: #333;
+    text-decoration: underline;
+}
+
+/* địa chỉ */
+
+.form-address {
+    padding: 20px;
+    background-color: #eee;
+    border-radius: 5px;
+}
+
+.form-address label {
+    font-size: 1.3rem;
+}
+
+.form-address .form-control {
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 1.4rem;
+    margin-bottom: 14px;
+}
+
+.address-info-wrap {
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 1.3rem;
+    overflow: hidden;
+    margin-bottom: 10px;
+}
+
+.address-info-wrap .address-title  {
+    background-color: #eeeeeec7;
+    border-bottom: 1px solid var(--border-color);
+    padding: 10px;
+}
+
+.address-info-wrap .address-info,
+.address-info-wrap .address-action {
+    padding: 0 10px 10px;
+}
+
+.address-info-wrap .address-action button {
+    font-weight: 500;
+    background-color: #eeeeeec7;
+}

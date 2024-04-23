@@ -159,7 +159,7 @@ function calcTotal() {
     var priceStr = productArr[id - 1].price;
         var priceTmp = parseInt(priceStr.replace(/\./g, ""));
         var total = qtyValue.value * priceTmp;
-        document.getElementById('total-temp').value = total.toLocaleString('en-US') + " VND";
+        document.getElementById('total-temp').value = total.toLocaleString() + " VND";
 }
 
 qtyValue.addEventListener('change', () => {

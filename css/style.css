@@ -460,6 +460,7 @@
     box-shadow: 2px 2px 20px var(--block-color);
     transition: ease-out .22s;
     position: relative;
+    cursor: pointer;
 }
 
 
@@ -479,6 +480,7 @@
     transform-origin: center top;
     animation: navProdGrowth ease-in .2s;
     will-change: opacity, transform;
+    z-index: 999;
 }
 
 .tooltip-inner {

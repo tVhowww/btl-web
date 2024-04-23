@@ -49,7 +49,7 @@ function renderProducts(category) {
     for (let i = products.length - 1; i >= products.length - 5; i--) {
         str += `
         <div class="col-xs-12 col-sm-6 col-md-4 col-2-4">
-            <a class="product-item" href="product-detail.html" id="${products[i].id}">
+            <div class="product-item" href="product-detail.html" id="${products[i].id}">
                 <img src="${products[i].image[0]}" alt="Kính" class="product-img">
 
                 <div class="product-img-hover">
@@ -65,7 +65,7 @@ function renderProducts(category) {
                     <span class="product-name">${products[i].name}</span>
                     <span class="product-price">${products[i].price}</span>
                 </div>
-            </a>
+            </div>
         </div>
         `
 
@@ -85,10 +85,11 @@ function moveToDetail() {
     const productList = document.querySelectorAll(".product-item");
     productList.forEach((product) => {
         product.addEventListener("click", () => {
-            localStorage.clear();
+            // localStorage.clear();
             localStorage.setItem("id", product.id);
             const cate = product.querySelector(".product-category").textContent;
             localStorage.setItem("category", cate);
+            window.location.href = "product-detail.html"
         });
     });
 }
@@ -99,7 +100,6 @@ function moveToDetail() {
 const search = document.getElementById('search')
 const searchRs = document.getElementById('search-rs')
 const renderSection = document.getElementById('render-section')
-
 
 search.addEventListener('focus', function () {
     searchRs.style.display = 'block'
@@ -117,17 +117,15 @@ search.addEventListener('input', () => {
     moveSearchToDetail();
 })
 
-
 function moveSearchToDetail() {
     const productList = document.querySelectorAll(".result-item");
     productList.forEach((product) => {
         product.addEventListener("click", () => {
-            localStorage.clear();
+            // localStorage.clear();
             localStorage.setItem("id", product.id);
         });
     });
 }
-
 
 function handleShowResult(searchValue) {
     const searchResults = productArr.filter((item) =>
@@ -153,4 +151,28 @@ function handleShowResult(searchValue) {
     }
 }
 
-
+// add to cart
+$(document).ready(function () {
+    // document.querySelectorAll('.btn-add-to-cart').forEach(button => {
+    //     button.addEventListener('click', function(event) {
+    //         event.stopPropagation();
+    
+    //         const productId = button.closest('.product-item').id;
+    //         console.log(productId);
+    
+    //         var productQuantity = JSON.parse(localStorage.getItem('productQuantity')) || {}; 
+            
+    //         if (productQuantity[productId]) {
+    //             productQuantity[productId]++;
+    //         } else {
+    //             productQuantity[productId] = 1;
+    //         }
+    
+    //         localStorage.setItem('productQuantity', JSON.stringify(productQuantity));
+    //         console.log(productQuantity);
+    
+    //     });
+    // });
+    
+    
+});

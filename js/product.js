@@ -5,7 +5,7 @@ function renderProducts(start, end) {
     for (let i = start; i < end; i++) {
         str += `
         <div class="col-xs-12 col-sm-6 col-md-4 col-2-4">
-            <a class="product-item" href="product-detail.html" id="${productArr[i].id}">
+            <div class="product-item" href="product-detail.html" id="${productArr[i].id}">
                 <img src="${productArr[i].image[0]}" alt="Kính" class="product-img">
     
                 <div class="product-img-hover">
@@ -21,7 +21,7 @@ function renderProducts(start, end) {
                     <span class="product-name">${productArr[i].name}</span>
                     <span class="product-price">${productArr[i].price}</span>
                 </div>
-            </a>
+            </div>
         </div>
         `
     }
@@ -35,8 +35,9 @@ renderProducts(0, 10);
 const productList = document.querySelectorAll(".product-item");
 productList.forEach((product) => {
     product.addEventListener("click", () => {
-        localStorage.clear();
+        // localStorage.clear();
         localStorage.setItem("id", product.id);
+        window.location.href = "product-detail.html"
     });
 });
 
@@ -55,8 +56,33 @@ for (let i = 0; i < pagiArr.length; i++) {
         if (pagiArr[i].textContent == 1)
             renderProducts(0, 10);
         else if (pagiArr[i].textContent == 2)
-        renderProducts(11, 21);
+            renderProducts(11, 21);
         else if (pagiArr[i].textContent == 3)
             renderProducts(22, productArr.length);
     });
 }
+
+
+// add to cart
+document.querySelectorAll('.btn-add-to-cart').forEach(button => {
+    button.addEventListener('click', function(event) {
+        event.stopPropagation();
+
+        const productId = button.closest('.product-item').id;
+        // console.log(productId);
+
+        var productQuantity = JSON.parse(localStorage.getItem('productQuantity')) || {}; 
+        
+        if (productQuantity[productId]) {
+            productQuantity[productId]++;
+        } else {
+            productQuantity[productId] = 1;
+        }
+
+        localStorage.setItem('productQuantity', JSON.stringify(productQuantity));
+        // console.log(productQuantity);
+        showSuccessToastr('Thêm vào giỏ hàng thành công.');
+
+    });
+});
+

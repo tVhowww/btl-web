@@ -1,0 +1,72 @@
+/* Tài khoản */
+
+.banner {
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner h3 {
+    font-size: 2.4rem;
+}
+
+.breadcrumb {
+    background-color: #fff;
+
+}
+.account-dashboard {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.account-dashboard a {
+    display: block;
+    border-bottom: 1px solid var(--border-color);
+    color: #333;
+    padding: 10px 10px 10px 20px;
+    font-size: 1.4rem;
+}
+
+.account-dashboard a:hover {
+    text-decoration: none;
+    opacity: 0.9;
+}
+
+.account-dashboard a:last-child {
+    border-bottom: none;
+}
+
+.account-dashboard a.active {
+    background-color: lightgray;
+    font-weight: 600;
+}
+
+.border-left {
+    border-left: 1px solid var((--border-color));
+}
+
+.col-md-9 span {
+    font-size: 1.3rem;
+}
+
+.col-md-9 span a {
+    color: #333;
+    text-decoration: underline;
+}
+
+.info-detail h4 {
+    font-size: 2rem;
+}
+
+.info-detail th,
+.info-detail td {
+    font-size: 1.4rem;
+}
+
+.info-detail tbody td i {
+    padding-right: 10px;
+    cursor: pointer;
+}

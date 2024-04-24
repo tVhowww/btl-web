@@ -1,4 +1,4 @@
-
+import productArr from "./product-data.js"
 let openMenu = true
 let openSubNav = true
 
@@ -68,12 +68,13 @@ $(document).ready(function () {
     const user = JSON.parse(localStorage.getItem("user"));
 
     const dangNhapTK = document.querySelector("#dangNhapTK");
-    const dangNhapTKMobile = document.querySelector("#dangNhapTK-mobile span");
+    const dangNhapTKMobile = document.querySelector('#dangNhapTK-mobile');
+    const dangNhapTKMobileSpan = document.querySelector("#dangNhapTK-mobile span");
 
     if (isLogin === "true" && user) {
-        dangNhapTK.innerText = user.name;
+        dangNhapTK.innerText = user.fName;
         dangNhapTK.href = "information.html";
-        dangNhapTKMobile.innerText = "Tài khoản";
+        dangNhapTKMobileSpan.innerText = "Tài khoản";
         dangNhapTKMobile.href = "information.html"
 
         // dangNhapTK.addEventListener("click", () => {
@@ -88,6 +89,63 @@ $(document).ready(function () {
         dangNhapTK.href = "sign-in.html";
     }
 })
+
+
+// Search
+
+const search = document.getElementById('search')
+const searchRs = document.getElementById('search-rs')
+const renderSection = document.getElementById('render-section')
+
+search.addEventListener('focus', function () {
+    searchRs.style.display = 'block'
+})
+
+document.body.addEventListener('click', function (event) {
+    if (event.target !== searchRs && event.target !== search && event.target !== renderSection) {
+        searchRs.style.display = 'none';
+    }
+});
+
+search.addEventListener('input', () => {
+    console.log(search.value);
+    handleShowResult(search.value);
+    moveSearchToDetail();
+})
+
+function moveSearchToDetail() {
+    const productList = document.querySelectorAll(".result-item");
+    productList.forEach((product) => {
+        product.addEventListener("click", () => {
+            // localStorage.clear();
+            localStorage.setItem("id", product.id);
+        });
+    });
+}
+
+function handleShowResult(searchValue) {
+    const searchResults = productArr.filter((item) =>
+        item.name.toLowerCase().includes(searchValue.toLowerCase())
+    )
+    if (searchResults.length > 0) {
+        let renderUI = ""
+        searchResults.forEach((item) => {
+            renderUI += `<a class="result-item" href="product-detail.html" id="${item.id}">
+                                    <img class=result-img src="${item.image[0]}" alt="">
+                                    <div class="result-info">
+                                        <div class="prod-info">
+                                            <h5>${item.name}</h5>
+                                            <p>${item.category}</p>
+                                        </div>
+                                        <div class="prod-price">${item.price} VND</div>
+                                    </div>
+                                </a>`
+        })
+        renderSection.innerHTML = renderUI
+    } else {
+        renderSection.innerHTML = `<div class="no-result text-center">Không có kết quả tìm kiếm</div>`
+    }
+}
 
 
 // toastr
@@ -143,20 +201,20 @@ function toastr({
     }
 }
 
-function showSuccessToastr(mess) {
+export function showSuccessToastr(mess) {
     toastr({
         title: 'Success',
         message: mess,
         type: 'success',
-        duration: 5000
+        duration: 6000
     });
 }
 
-function showErrorToastr(mess) {
+export function showErrorToastr(mess) {
     toastr({
         title: 'Error',
         message: mess,
         type: 'error',
-        duration: 5000
+        duration: 6000
     });
 }

@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/responsive.css">
     <link rel="stylesheet" href="../css/cart.css">
-    <script src="../js/main.js"></script>
-    <script src="../js/product-data.js"></script>
+    <script type="module" src="../js/product-data.js"></script>
+    <script type="module" src="../js/main.js"></script>
     <script type="module" src="../js/cart.js"></script>
 </head>
 
@@ -172,11 +172,6 @@
                 </div>
 
                 <div class="nav-pc nav-right">
-                    <!-- <i class="nav-right__icon fa-solid fa-magnifying-glass"></i>
-                    <i class="nav-right__icon fa-regular fa-user"></i>
-                    <i class="nav-right__icon fa-regular fa-heart"></i>
-                    <i class="nav-right__icon fa-solid fa-cart-shopping"></i>
-                     -->
                     <div class="nav-right-top">
                         <ul class="none-list-style">
                             <li>
@@ -191,7 +186,7 @@
                             <span>|</span>
                             <li>
                                 <i class="nav-right__icon fa fa-shopping-cart"></i>
-                                <a href="#">Giỏ hàng</a>
+                                <a href="cart.html">Giỏ hàng</a>
                             </li>
                         </ul>
                     </div>
@@ -284,88 +279,10 @@
                         </li>
                     </ul>
                 </div>
+                <div id="toastr"></div>
+                <!-- render -->
                 <div id="cart-inner">
-                    <!-- No cart -->
-                    <!-- <div id="no-cart" style="font-size: 1.4rem;" class="d-flex flex-column align-items-center justify-content-center text-center mb-5">
-                        <h1 style="font-size: 4.2rem;color: #555;">Chưa có sản phẩm nào trong giỏ hàng.</h1>
-                        <p>Trước khi tiến hành thanh toán, bạn phải thêm một số sản phẩm vào giỏ hàng của mình.
-                            Bạn sẽ tìm thấy rất nhiều sản phẩm thú vị trên trang "Cửa hàng" của chúng tôi.</p>
-                        <button type="button" class="btn btn-info py-3 px-5 fw-bolder">Quay lại cửa hàng</button>
-                    </div> -->
-                    <!-- Has cart -->
-                    <!-- <div id="has-cart" class="row">
-                        <div class="col-md-8">
-                            <table class="table text-center">
-                                <thead>
-                                    <tr>
-                                        <th colspan="3">Sản phẩm</th>
-                                        <th>Giá</th>
-                                        <th>Số lượng</th>
-                                        <th>Tạm tính</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="tbl">
-                                    <tr>
-                                        <td>
-                                            <i class="fa-solid fa-xmark btn-close"></i>
-                                        </td>
-                                        <td>
-                                            <img src="../img/prod1.webp" alt="">
-                                        </td>
-                                        <td>
-                                            Tên sản phẩm
-                                        </td>
-                                        <td>
-                                            Giá
-                                        </td>
-                                        <td>
-                                            <div class="quantity">
-                                                <input type="button" value="-" class="qtyBtn minus">
-                                                <input type="number" name="quantity" id="qtyVal" value="1" min="1" max step="1"
-                                                    inputmode="numeric" autocomplete="off">
-                                                <input type="button" value="+" class="qtyBtn plus">
-                                            </div>
-                                        </td>
-                                        <td>
-                                            200000
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <div class="col-md-4">
-                            <div class="cart-total-wrap">
-                                <h2>CỘNG GIỎ HÀNG</h2>
-                                <div class="cart-total">
-                                    <div class="row">
-                                        <div>
-                                            Tạm tính
-                                        </div>
-                                        <div>
-                                            200000
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div>
-                                            Phí giao hàng
-                                        </div>
-                                        <div>
-                                            200
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div>
-                                            Tổng
-                                        </div>
-                                        <div>
-                                            1.333.333
-                                        </div>
-                                    </div>
-                                </div>
-                                <button type="button" class="btn btn-block btn-dark">TIẾN HÀNH THANH TOÁN</button>
-                            </div>
-                        </div>
-                    </div> -->
+                    
                 </div>
             </div>
         </section>
@@ -393,7 +310,7 @@
                             </li>
                             <li class="footer__item">
                                 <i class="fa-solid fa-phone-flip mr-1"></i>
-                                0394 666 888
+                                0888 666 888
                             </li>
                             <li class="footer__item">
                                 <i class="fa-solid fa-envelope mr-1"></i>

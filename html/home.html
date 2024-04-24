@@ -13,9 +13,9 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/responsive.css">
-    <script src="../js/product-data.js"></script>
+    <script type="module" src="../js/product-data.js"></script>
+    <script type="module" src="../js/main.js"></script>
     <script type="module" src="../js/home.js"></script>
-    <script src="../js/main.js"></script>
 </head>
 
 <body>
@@ -58,13 +58,13 @@
 
                             <ul class="nav__prod--mobile p-0 none-list-style">
                                 <li class="nav__prod-item">
-                                    <a href="#" class="nav__prod-link">Kính Cận</a>
+                                    <a href="product.html" class="nav__prod-link">Kính Cận</a>
                                 </li>
                                 <li class="nav__prod-item">
-                                    <a href="#" class="nav__prod-link">Kính Râm</a>
+                                    <a href="product.html" class="nav__prod-link">Kính Râm</a>
                                 </li>
                                 <li class="nav__prod-item">
-                                    <a href="#" class="nav__prod-link">Kính Thời Trang</a>
+                                    <a href="product.html" class="nav__prod-link">Kính Thời Trang</a>
                                 </li>
                             </ul>
                         </li>
@@ -131,13 +131,13 @@
 
                             <ul class="nav__prod--pc none-list-style">
                                 <li class="nav__prod-item">
-                                    <a href="#" class="nav__prod-link">Kinh Cận</a>
+                                    <a href="product.html" class="nav__prod-link">Kính Cận</a>
                                 </li>
                                 <li class="nav__prod-item">
-                                    <a href="#" class="nav__prod-link">Kính Râm</a>
+                                    <a href="product.html" class="nav__prod-link">Kính Râm</a>
                                 </li>
                                 <li class="nav__prod-item">
-                                    <a href="#" class="nav__prod-link">Kính Thời Trang</a>
+                                    <a href="product.html" class="nav__prod-link">Kính Thời Trang</a>
                                 </li>
                             </ul>
                         </li>
@@ -172,11 +172,6 @@
                 </div>
 
                 <div class="nav-pc nav-right">
-                    <!-- <i class="nav-right__icon fa-solid fa-magnifying-glass"></i>
-                    <i class="nav-right__icon fa-regular fa-user"></i>
-                    <i class="nav-right__icon fa-regular fa-heart"></i>
-                    <i class="nav-right__icon fa-solid fa-cart-shopping"></i>
-                     -->
                     <div class="nav-right-top">
                         <ul class="none-list-style">
                             <li>
@@ -184,7 +179,7 @@
                                 <a href="#" data-bs-toggle="modal" data-bs-target="#myModal">Trợ giúp</a>
                             </li>
                             <span>|</span>
-                            <li>
+                            <li class="text-center">
                                 <i class="nav-right__icon fa fa-user"></i>
                                 <a href="../html/sign-in.html" id="dangNhapTK">Đăng nhập</a>
                             </li>
@@ -315,14 +310,14 @@
             <div class="category__heading text-center mb-5">
                 <h1 class="mb-4">DANH MỤC NỔI BẬT</h1>
                 <p style="font-size: 1.4rem;font-weight: lighter;">Sở hữu ngay mắt kính chất lượng giá tốt chỉ từ
-                    <span style="font-size: 1.8rem;color: #0091ff; font-weight: 500;">2.000</span>
+                    <span style="font-size: 1.8rem;color: var(--secondary-color); font-weight: 500;">2.000</span>
                     <i style="font-size: 1rem;">USD</i>
                 </p>
             </div>
 
             <ul class="category-list row">
                 <li class="category-item col-xs-6 col-sm-4 col-2-4">
-                    <a href="#" class="category-link">
+                    <a href="product.html" class="category-link">
                         <div class="category-link__content">
                             <div class="category-link__img">
                                 <img src="../img/category-banner1.webp" alt="">
@@ -335,7 +330,7 @@
                     </a>
                 </li>
                 <li class="category-item col-xs-6 col-sm-4 col-2-4">
-                    <a href="#" class="category-link">
+                    <a href="product.html" class="category-link">
                         <div class="category-link__content">
                             <div class="category-link__img">
                                 <img src="../img/category-banner2.webp" alt="">
@@ -348,7 +343,7 @@
                     </a>
                 </li>
                 <li class="category-item col-xs-6 col-sm-4 col-2-4">
-                    <a href="#" class="category-link">
+                    <a href="product.html" class="category-link">
                         <div class="category-link__content">
                             <div class="category-link__img">
                                 <img src="../img/category-banner3.webp" alt="">
@@ -400,17 +395,17 @@
 
             <ul class="category-nav__list">
                 <li class="category-nav__item">
-                    <a href="" class="category-nav__link active">
+                    <a href="#" class="category-nav__link active">
                         Kính Cận
                     </a>
                 </li>
                 <li class="category-nav__item">
-                    <a href="" class="category-nav__link">
+                    <a href="#" class="category-nav__link">
                         Kính Râm
                     </a>
                 </li>
                 <li class="category-nav__item">
-                    <a href="" class="category-nav__link">
+                    <a href="#" class="category-nav__link">
                         Kính Thời Trang
                     </a>
                 </li>
@@ -425,6 +420,7 @@
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
                     <!-- render data -->
+                    <div id="toastr"></div>
                     <div id="productContainerHome" class="row">
 
                     </div>
@@ -467,7 +463,7 @@
                             </li>
                             <li class="footer__item">
                                 <i class="fa-solid fa-phone-flip mr-1"></i>
-                                0394 666 888
+                                0888 666 888
                             </li>
                             <li class="footer__item">
                                 <i class="fa-solid fa-envelope mr-1"></i>

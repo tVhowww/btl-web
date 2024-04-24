@@ -1,4 +1,5 @@
 import productArr from "./product-data.js";
+import { showSuccessToastr, showErrorToastr } from "./main.js";
 
 $(document).ready(function () {
     const cartProdStr = localStorage.getItem('productQuantity')
@@ -25,7 +26,6 @@ $(document).ready(function () {
 
 
         var prodRender = '';
-        // let idCounter = 0; // Biến đếm cho id
 
         for (let i = 0; i < cartLength; i++) {
             const productId = cartProdId[i];
@@ -40,7 +40,6 @@ $(document).ready(function () {
                 console.log(shipFee);
             }
 
-            // const rowId = `cart-row-${idCounter++}`; // Tạo id duy nhất cho mỗi dòng
             const rowId = `cart-row-${productId - 1}`;
             // console.log(rowId);
 
@@ -113,21 +112,32 @@ $(document).ready(function () {
                                 <div>
                                     Tổng
                                 </div>
-                                <div id="total">
-                                    ${(total + shipFee).toLocaleString()}
+                                <div id="total" style="color: red;font-size: 2rem; font-weight: 500">
+                                    ${(total + shipFee).toLocaleString()} VND
                                 </div>
                             </div>
                         </div>
                         <spans style="font-style: italic;color: red">* đơn hàng trên 10,000,000 VND sẽ được freeship</spans>
-                        <button type="button" class="btn btn-block btn-dark">TIẾN HÀNH THANH TOÁN</button>
+                        <button id="payment-btn" type="button" class="btn btn-block btn-dark">TIẾN HÀNH THANH TOÁN</button>
                     </div>
                 </div>
             </div>`;
         cartInner.innerHTML = hasCart;
     }
+    // payment btn
+    const paymentBtn = document.querySelector('#payment-btn');
+    var isLogin = localStorage.getItem('isLoggedIn');
+    paymentBtn.addEventListener('click', () => {
+        if (isLogin === "false") {
+            var choice = confirm('Bạn chưa đăng nhập! Tiến tới đăng nhập?');
+            if (choice) {
+                window.location.href = 'sign-in.html';
+            }
+        }
+    })
 
-    const qtyBtns = document.querySelectorAll(".qtyBtn");
-    const qtyValues = document.querySelectorAll(".qtyVal");
+    var qtyBtns = document.querySelectorAll(".qtyBtn");
+    var qtyValues = document.querySelectorAll(".qtyVal");
 
     function calcTotal() {
         let total = 0;
@@ -138,13 +148,15 @@ $(document).ready(function () {
             total += subtotal;
             if (total >= 10000000) {
                 shipFee = 0;
-                console.log(shipFee);
-                document.getElementById('shipFee').textContent = shipFee.toLocaleString()
+            } else {
+                shipFee = 300000
             }
+            console.log(shipFee);
+            document.getElementById('shipFee').textContent = shipFee.toLocaleString()
             document.getElementById('subtotal-' + qtyValue.getAttribute("data-row")).textContent = subtotal.toLocaleString() + " VND";
         });
         document.getElementById('totalTmp').textContent = total.toLocaleString()
-        document.getElementById('total').textContent = (total + shipFee).toLocaleString()
+        document.getElementById('total').textContent = (total + shipFee).toLocaleString() + "VND"
     }
 
     qtyValues.forEach((qtyValue) => {
@@ -173,37 +185,45 @@ $(document).ready(function () {
     // Sự kiện xóa sản phẩm khi click vào nút btn-close
     const closeButtons = document.querySelectorAll(".btn-close");
     closeButtons.forEach((closeBtn) => {
-        closeBtn.addEventListener("click", (event) => {
-            const rowId = closeBtn.closest("tr").id;
-            const qtyValue = document.querySelector(`.qtyVal[data-row="${rowId}"]`);
-            const productId = rowId.split("-")[2];
-            console.log(parseInt(productId) + 1);
+        closeBtn.addEventListener("click", () => {
+            var cfm = confirm("Chắc chắn xóa?");
+            if (cfm) {
+                const rowId = closeBtn.closest("tr").id;
+                const qtyValue = document.querySelector(`.qtyVal[data-row="${rowId}"]`);
+                const productId = rowId.split("-")[2];
+                // console.log(parseInt(productId) + 1);
 
-            const rowElement = document.getElementById(rowId);
-            rowElement.parentNode.removeChild(rowElement);
+                const rowElement = document.getElementById(rowId);
+                rowElement.parentNode.removeChild(rowElement);
 
-            const productPrice = parseInt(productArr[productId].price.replace(/\./g, ''));
-            const quantity = parseInt(qtyValue.value);
-            const subtotal = productPrice * quantity;
-            total -= subtotal;
+                const productPrice = parseInt(productArr[productId].price.replace(/\./g, ''));
+                const quantity = parseInt(qtyValue.value);
+                const subtotal = productPrice * quantity;
+                total -= subtotal;
 
-            if (total >= 10000000) {
-                shipFee = 0;
-            } else {
-                shipFee = 300000;
-            }
-            document.getElementById('shipFee').textContent = shipFee.toLocaleString();
+                if (total >= 10000000) {
+                    shipFee = 0;
+                } else {
+                    shipFee = 300000;
+                }
+                document.getElementById('shipFee').textContent = shipFee.toLocaleString();
+                document.getElementById('totalTmp').textContent = total.toLocaleString();
+                document.getElementById('total').textContent = (total + shipFee).toLocaleString();
 
-            document.getElementById('totalTmp').textContent = total.toLocaleString();
-            document.getElementById('total').textContent = (total + shipFee).toLocaleString();
+                // Xóa sản phẩm khỏi localStorage
+                const cartProdObj = JSON.parse(localStorage.getItem('productQuantity'));
+                delete cartProdObj[parseInt(productId) + 1];
+                localStorage.setItem('productQuantity', JSON.stringify(cartProdObj));
+                showSuccessToastr('Giỏ hàng đã được cập nhật.')
+                if (Object.keys(cartProdObj).length === 0) {
+                    localStorage.removeItem('productQuantity');
+                    location.reload()
+                }
 
-            // Xóa sản phẩm khỏi localStorage
-            const cartProdObj = JSON.parse(localStorage.getItem('productQuantity'));
-            delete cartProdObj[parseInt(productId) + 1];
-            localStorage.setItem('productQuantity', JSON.stringify(cartProdObj));
-            if (Object.keys(cartProdObj).length === 0) {
-                localStorage.removeItem('productQuantity');
+                qtyBtns = document.querySelectorAll(".qtyBtn");
+                qtyValues = document.querySelectorAll(".qtyVal");
             }
         });
     });
+
 });

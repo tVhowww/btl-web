@@ -1,38 +1,13 @@
 import productArr from "./product-data.js";
+import { showSuccessToastr, showErrorToastr } from "./main.js";
+
 
 // mặc định khi load trang sẽ render Kính Cận
 const defaultCategory = "Kính Cận";
 localStorage.setItem("defaultCategory", defaultCategory);
 
-// Render trang chủ
-document.addEventListener('DOMContentLoaded', function () {
-    let getCate = localStorage.getItem("category");
-    if (!getCate) {
-        getCate = localStorage.getItem("defaultCategory");
-    }
-    renderProducts(getCate);
-    // setActive
-    for (let i = 0; i < categoryLink.length; i++) {
-        categoryLink[i].classList.remove('active');
-        if (categoryLink[i].textContent.trim() === getCate) {
-            categoryLink[i].classList.add('active');
-        }
-    }
-});
-
 // click vào danh mục -> render sản phẩm
 var categoryLink = document.querySelectorAll('.category-nav__link');
-categoryLink.forEach(link => {
-    link.addEventListener('click', function (event) {
-        event.preventDefault();
-        // setActive
-        for (let i = 0; i < categoryLink.length; i++) {
-            categoryLink[i].classList.remove('active');
-        }
-        event.currentTarget.classList.add('active');
-        renderProducts(link.textContent.trim());
-    });
-});
 
 // hàm render sản phẩm dựa trên loại sản phẩm được chọn
 function renderProducts(category) {
@@ -95,84 +70,56 @@ function moveToDetail() {
 }
 
 
-// Search
-
-const search = document.getElementById('search')
-const searchRs = document.getElementById('search-rs')
-const renderSection = document.getElementById('render-section')
-
-search.addEventListener('focus', function () {
-    searchRs.style.display = 'block'
-})
-
-document.body.addEventListener('click', function (event) {
-    if (event.target !== searchRs && event.target !== search && event.target !== renderSection) {
-        searchRs.style.display = 'none';
+$(document).ready(function () {
+    // Render trang chủ
+    let getCate = localStorage.getItem("category");
+    if (!getCate) {
+        getCate = localStorage.getItem("defaultCategory");
     }
-});
+    renderProducts(getCate);
+    // setActive
+    for (let i = 0; i < categoryLink.length; i++) {
+        categoryLink[i].classList.remove('active');
+        if (categoryLink[i].textContent.trim() === getCate) {
+            categoryLink[i].classList.add('active');
+        }
+    }
 
-search.addEventListener('input', () => {
-    console.log(search.value);
-    handleShowResult(search.value);
-    moveSearchToDetail();
-})
-
-function moveSearchToDetail() {
-    const productList = document.querySelectorAll(".result-item");
-    productList.forEach((product) => {
-        product.addEventListener("click", () => {
-            // localStorage.clear();
-            localStorage.setItem("id", product.id);
+    // click vào danh mục -> render sản phẩm
+    categoryLink.forEach(link => {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+            // setActive
+            for (let i = 0; i < categoryLink.length; i++) {
+                categoryLink[i].classList.remove('active');
+            }
+            event.currentTarget.classList.add('active');
+            renderProducts(link.textContent.trim());
         });
     });
-}
 
-function handleShowResult(searchValue) {
-    const searchResults = productArr.filter((item) =>
-        item.name.toLowerCase().includes(searchValue.toLowerCase())
-    )
-    if (searchResults.length > 0) {
-        let renderUI = ""
-        searchResults.forEach((item) => {
-            renderUI += `<a class="result-item" href="product-detail.html" id="${item.id}">
-                                    <img class=result-img src="${item.image[0]}" alt="">
-                                    <div class="result-info">
-                                        <div class="prod-info">
-                                            <h5>${item.name}</h5>
-                                            <p>${item.category}</p>
-                                        </div>
-                                        <div class="prod-price">${item.price} VND</div>
-                                    </div>
-                                </a>`
-        })
-        renderSection.innerHTML = renderUI
-    } else {
-        renderSection.innerHTML = `<div class="no-result text-center">Không có kết quả tìm kiếm</div>`
-    }
-}
-
-// add to cart
-$(document).ready(function () {
-    // document.querySelectorAll('.btn-add-to-cart').forEach(button => {
-    //     button.addEventListener('click', function(event) {
-    //         event.stopPropagation();
+    // add to cart
+    document.querySelectorAll('.btn-add-to-cart').forEach(button => {
+        button.addEventListener('click', function(event) {
+            event.stopPropagation();
     
-    //         const productId = button.closest('.product-item').id;
-    //         console.log(productId);
+            const productId = button.closest('.product-item').id;
+            console.log(productId);
     
-    //         var productQuantity = JSON.parse(localStorage.getItem('productQuantity')) || {}; 
+            var productQuantity = JSON.parse(localStorage.getItem('productQuantity')) || {}; 
             
-    //         if (productQuantity[productId]) {
-    //             productQuantity[productId]++;
-    //         } else {
-    //             productQuantity[productId] = 1;
-    //         }
+            if (productQuantity[productId]) {
+                productQuantity[productId]++;
+            } else {
+                productQuantity[productId] = 1;
+            }
     
-    //         localStorage.setItem('productQuantity', JSON.stringify(productQuantity));
-    //         console.log(productQuantity);
+            localStorage.setItem('productQuantity', JSON.stringify(productQuantity));
+            console.log(productQuantity);
+            showSuccessToastr('Thêm vào giỏ hàng thành công.')
     
-    //     });
-    // });
+        });
+    });
     
     
 });

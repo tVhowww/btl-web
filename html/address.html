@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/responsive.css">
     <link rel="stylesheet" href="../css/address.css">
-    <script src="../js/main.js"></script>
+    <script type="module" src="../js/main.js"></script>
     <script src="../js/address.js"></script>
 </head>
 
@@ -171,11 +171,6 @@
                 </div>
 
                 <div class="nav-pc nav-right">
-                    <!-- <i class="nav-right__icon fa-solid fa-magnifying-glass"></i>
-                    <i class="nav-right__icon fa-regular fa-user"></i>
-                    <i class="nav-right__icon fa-regular fa-heart"></i>
-                    <i class="nav-right__icon fa-solid fa-cart-shopping"></i>
-                     -->
                     <div class="nav-right-top">
                         <ul class="none-list-style">
                             <li>
@@ -190,7 +185,7 @@
                             <span>|</span>
                             <li>
                                 <i class="nav-right__icon fa fa-shopping-cart"></i>
-                                <a href="#">Giỏ hàng</a>
+                                <a href="cart.html">Giỏ hàng</a>
                             </li>
                         </ul>
                     </div>
@@ -289,7 +284,7 @@
                             <a href="information.html">Bảng điều khiển</a>
                             <a href="address.html" class="active">Địa chỉ của tôi</a>
                             <a href="cart.html">Danh sách sản phẩm trong giỏ hàng</a>
-                            <a href="#">Đăng xuất</a>
+                            <a id="log-out-btn" href="#">Đăng xuất</a>
                         </div>
                     </div>
                     <div class="col-md-9 border-left">
@@ -365,7 +360,7 @@
                             </li>
                             <li class="footer__item">
                                 <i class="fa-solid fa-phone-flip mr-1"></i>
-                                0394 666 888
+                                0888 666 888
                             </li>
                             <li class="footer__item">
                                 <i class="fa-solid fa-envelope mr-1"></i>

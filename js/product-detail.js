@@ -1,4 +1,6 @@
 import productArr from "./product-data.js";
+import { showSuccessToastr, showErrorToastr } from "./main.js";
+
 
 const id = localStorage.getItem("id");
 const img = document.querySelector(".carousel-inner");
@@ -176,4 +178,21 @@ qtyBtns[0].addEventListener("click", () => {
 qtyBtns[1].addEventListener("click", () => {
     qtyValue.value++;
     calcTotal()
+})
+
+// add to cart
+const addToCartBtn = document.querySelector('#add-to-cart');
+addToCartBtn.addEventListener('click', () => {
+    const productId = localStorage.getItem('id');
+    var productQuantity = JSON.parse(localStorage.getItem('productQuantity')) || {}; 
+    
+    if (productQuantity[productId]) {
+        productQuantity[productId]++;
+    } else {
+        productQuantity[productId] = 1;
+    }
+
+    localStorage.setItem('productQuantity', JSON.stringify(productQuantity));
+    showSuccessToastr('Thêm vào giỏ hàng thành công.');
+
 })

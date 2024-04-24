@@ -36,7 +36,7 @@
 .category__link,
 .category__sub-link {
     display: block;
-    color: #777;
+    color: var(--text-color);
     font-size: 1.3rem;
     text-transform: capitalize;
     font-weight: 500;
@@ -45,7 +45,7 @@
 }
 
 .category__link.active {
-    color: #000;
+    color: var(--black-color);
 }
 
 .category__link:hover,
@@ -71,12 +71,12 @@
     border-radius: 5px;
 }
 .sort-filter__item {
-    border: 1px solid #fff;
+    border: 1px solid var(--while-color);
     border-radius: 5px;
     outline: none;
     padding: 5px 12px;
     min-width: 80px;
-    background-color: #fff;
+    background-color: var(--while-color);
     font-size: 1.3rem;
     margin: 3px;
 }

@@ -11,7 +11,7 @@
 }
 
 .breadcrumb {
-    background-color: #fff;
+    background-color: var(--while-color);
 
 }
 

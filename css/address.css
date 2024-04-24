@@ -11,7 +11,7 @@
 }
 
 .breadcrumb {
-    background-color: #fff;
+    background-color: var(--while-color);
 
 }
 .account-dashboard {
@@ -23,7 +23,7 @@
 .account-dashboard a {
     display: block;
     border-bottom: 1px solid var(--border-color);
-    color: #333;
+    color: var(--primary-color);
     padding: 10px 10px 10px 20px;
     font-size: 1.4rem;
 }
@@ -51,7 +51,7 @@
 }
 
 .col-md-9 span a {
-    color: #333;
+    color: var(--primary-color);
     text-decoration: underline;
 }
 

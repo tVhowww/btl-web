@@ -2,6 +2,15 @@ $(document).ready(function () {
     const user = JSON.parse(localStorage.getItem("user"));
     const addressInner = document.getElementById('address-info-inner');
 
+    // đăng xuất
+    document.getElementById('log-out-btn').addEventListener('click', () => {
+        var choice = confirm('Bạn muốn đăng xuất?');
+            if (choice) {
+                localStorage.setItem('isLoggedIn', 'false');
+                window.location.href = 'home.html';
+            }
+    })
+
     var addressDetail =
         `<div class="col-6">
         <div class="address-info-wrap">
@@ -10,7 +19,7 @@ $(document).ready(function () {
                 <span id="default">(mặc định)</span>
             </h4>
             <div class="address-info">
-                <p>${user.name}</p>
+                <p>${user.fName}</p>
                 <p>${user.phone}</p>
                 <p></p>
             </div>
@@ -60,7 +69,6 @@ $(document).ready(function () {
     
     var addAddressBtn = document.getElementById('add-address-btn');
 
-    let cnt = 0
     addAddressBtn.addEventListener('click', () => {
         var name = document.getElementById('fName').value;
         var phone = document.getElementById('phone').value;
@@ -70,7 +78,6 @@ $(document).ready(function () {
         if (name == '' && phone == '' && address1 == '' && address2 == '') {
             return;
         } else {
-            cnt += 1
             addressInner.innerHTML +=
                 `<div class="col-6">
                     <div class="address-info-wrap">

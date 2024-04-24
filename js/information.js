@@ -1,10 +1,10 @@
 $(document).ready(function () {
-    const parent = document.getElementById('tbl');
+    const bodyTable = document.getElementById('tbl');
     const user = JSON.parse(localStorage.getItem("user"));
 
     const gender = user.gender;
     let genderStr = "";
-    if (gender === 0)
+    if (gender === 1)
         genderStr = "Nam"
     else
         genderStr = "Nữ"
@@ -12,7 +12,7 @@ $(document).ready(function () {
     var info =
     `<tr>
         <th>Họ tên</th>
-        <td>${user.name}</td>
+        <td>${user.fName}</td>
     </tr>
     <tr>
         <th>Email</th>
@@ -37,8 +37,12 @@ $(document).ready(function () {
             <i id="hide-pass" class="fa-regular fa-eye"></i>
         </td>
     </tr>`
-    parent.innerHTML = info
+    bodyTable.innerHTML = info
 
+    // get welcome name
+    document.getElementById('welcome-name').textContent = user.fName;
+
+    // hide/unhide pass
     const pwdText = document.querySelector('.passwordText');
     const hidePwd = document.querySelector('#hide-pass');
 
@@ -59,4 +63,16 @@ $(document).ready(function () {
             hidePwd.classList.add('fa-eye-slash');
         }
     });
+
+    // đăng xuất
+    const logOutBtn = document.querySelectorAll('.log-out-btn');
+    logOutBtn.forEach(btn => {
+        btn.addEventListener('click', () => {
+            var choice = confirm('Bạn muốn đăng xuất?');
+            if (choice) {
+                localStorage.setItem('isLoggedIn', 'false');
+                window.location.href = 'home.html';
+            }
+        })
+    })
 });

@@ -92,7 +92,7 @@
     }
 
     .sub-nav__mobile li a {
-        color: #777;
+        color: var(--text-color);
     }
 
     .form__search--mobile {

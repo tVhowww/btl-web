@@ -1,4 +1,5 @@
 import users from './users-data.js';
+import { showSuccessToastr, showErrorToastr } from "./main.js";
 
 $(document).ready(function () {
 
@@ -50,7 +51,6 @@ $(document).ready(function () {
             return showErrorToastr('Phải trên 18 tuổi');
         }
     });
-
     $("#password").blur(() => {
         var password = $("#password").val();
         if (password == '')
@@ -70,8 +70,9 @@ $(document).ready(function () {
         }
     })
     // Đăng kí
+    // const users = JSON.parse(localStorage.getItem("users"));
+    console.log(users);
     document.getElementById("register").onclick = (e) => {
-        // const users = JSON.parse(localStorage.getItem("users"));
         e.preventDefault();
         document.getElementById("formSignUp").reportValidity();
         var fName = $("#fName").val();

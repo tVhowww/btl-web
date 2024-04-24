@@ -171,11 +171,6 @@
                 </div>
 
                 <div class="nav-pc nav-right">
-                    <!-- <i class="nav-right__icon fa-solid fa-magnifying-glass"></i>
-                    <i class="nav-right__icon fa-regular fa-user"></i>
-                    <i class="nav-right__icon fa-regular fa-heart"></i>
-                    <i class="nav-right__icon fa-solid fa-cart-shopping"></i>
-                     -->
                     <div class="nav-right-top">
                         <ul class="none-list-style">
                             <li>
@@ -311,6 +306,7 @@
 
                     </div>
                     <div class="tools">
+                        <div id="toastr"></div>
                         <div class="row add-cart-section">
                             <div class="quantity">
                                 <input type="button" value="-" class="qtyBtn minus">
@@ -320,7 +316,7 @@
                             </div>
                             <div class="add-cart-btn">
                                 <input type="text" name="total-temp" value="" id="total-temp" readonly>
-                                <button type="button">
+                                <button id="add-to-cart" type="button">
                                     <i class="fa fa-shopping-cart"></i>
                                     Thêm vào giỏ hàng
                                 </button>
@@ -366,7 +362,7 @@
                             </li>
                             <li class="footer__item">
                                 <i class="fa-solid fa-phone-flip mr-1"></i>
-                                0394 666 888
+                                0888 666 888
                             </li>
                             <li class="footer__item">
                                 <i class="fa-solid fa-envelope mr-1"></i>
@@ -445,10 +441,8 @@
         </div>
         <!-- End footer -->
     </div>
-    <script src="../js/main.js"></script>
-    <script src="../js/product-data.js"></script>
-    <script type="module" src="../js/home.js"></script>
+    <script type="module" src="../js/main.js"></script>
+    <script type="module" src="../js/product-data.js"></script>
     <script type="module" src="../js/product-detail.js"></script>
 </body>
-
 </html>

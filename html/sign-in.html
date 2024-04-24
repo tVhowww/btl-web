@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/responsive.css">
     <link rel="stylesheet" href="../css/sign-in.css">
-    <script src="../js/main.js"></script>
-    <script src="../js/sign-in.js"></script>
+    <script type="module" src="../js/main.js"></script>
+    <script type="module" src="../js/sign-in.js"></script>
 </head>
 
 <body>
@@ -171,11 +171,6 @@
                 </div>
 
                 <div class="nav-pc nav-right">
-                    <!-- <i class="nav-right__icon fa-solid fa-magnifying-glass"></i>
-                    <i class="nav-right__icon fa-regular fa-user"></i>
-                    <i class="nav-right__icon fa-regular fa-heart"></i>
-                    <i class="nav-right__icon fa-solid fa-cart-shopping"></i>
-                     -->
                     <div class="nav-right-top">
                         <ul class="none-list-style">
                             <li>
@@ -190,7 +185,7 @@
                             <span>|</span>
                             <li>
                                 <i class="nav-right__icon fa fa-shopping-cart"></i>
-                                <a href="#">Giỏ hàng</a>
+                                <a href="cart.html">Giỏ hàng</a>
                             </li>
                         </ul>
                     </div>
@@ -289,16 +284,20 @@
                         <div class="col-12 d-flex justify-content-between mb-3">
                             <div class="left">
                                 <div class="form-check">
-                                    <input id="remember" class="form-check-input mr-3" type="checkbox" name="option1" value="something">
+                                    <input id="remember" class="form-check-input mr-3" type="checkbox" name="option1"
+                                        value="something">
                                     <label class="form-check-label ml-3" for="remember">Ghi nhớ tôi</label>
                                 </div>
-                            </div>                            
+                            </div>
                             <div class="right">
                                 <a href="#FPModal" data-bs-toggle="modal">Quên mật khẩu?</a>
                             </div>
                         </div>
                         <div class="col-12">
-                            <button class="button" type="submit" id="submit">Đăng nhập</button>
+                            <button class="btn button" type="submit" id="submit">
+                                <span style="visibility: hidden;" class="spinner-border spinner-border-sm"></span>
+                                Đăng nhập
+                            </button>
                         </div>
                         <div style="font-size: 1.4rem;" class="col-12 text-center">
                             Chưa có tài khoản? <a class="text-info" href="sign-up.html">Đăng ký ngay!</a>
@@ -325,14 +324,16 @@
 
                                     <!-- Text -->
                                     <p class="mb-4 fs-sm text-gray-500">
-                                        Hãy điền địa chỉ email của bạn. Bạn sẽ nhận được liên kết để tạo mật khẩu mới qua email.
+                                        Hãy điền địa chỉ email của bạn. Bạn sẽ nhận được liên kết để tạo mật khẩu mới
+                                        qua email.
                                     </p>
 
                                     <!-- Form -->
                                     <form action="" id="formReset">
                                         <!-- Email -->
                                         <div class="form-group">
-                                            <label style="float: left;" class="visually-hidden" for="modalPasswordResetEmail">
+                                            <label style="float: left;" class="visually-hidden"
+                                                for="modalPasswordResetEmail">
                                                 Email *
                                             </label>
                                             <input class="form-control form-control-sm" id="modalPasswordResetEmail"
@@ -375,7 +376,7 @@
                             </li>
                             <li class="footer__item">
                                 <i class="fa-solid fa-phone-flip mr-1"></i>
-                                0394 666 888
+                                0888 666 888
                             </li>
                             <li class="footer__item">
                                 <i class="fa-solid fa-envelope mr-1"></i>

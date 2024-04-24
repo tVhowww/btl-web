@@ -62,7 +62,7 @@
 }
 
 .content .breadcrumb-item a {
-    color: #000;
+    color: var(--black-color);
 }   
 
 .content .breadcrumb-item a:hover {
@@ -98,8 +98,8 @@
     font-size: 1.4rem;
     width: 100%;
     padding: 10px;
-    background-color: #000;
-    color: #fff;
+    background-color: var(--black-color);
+    color: var(--while-color);
     border: none;
     outline: none;
     text-transform: uppercase;

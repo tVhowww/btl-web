@@ -3,7 +3,7 @@ import { showSuccessToastr, showErrorToastr } from "./main.js";
 $(document).ready(function () {
     localStorage.setItem("isLoggedIn", "false");
     const users = JSON.parse(localStorage.getItem("users"));
-
+    // console.log(users ? "có": "ko");
     // Submit form đăng nhập
     $("#submit").click(function (e) {
         e.preventDefault()
@@ -13,6 +13,7 @@ $(document).ready(function () {
         if (email == '' || password == '')
             return;
         var user = users.filter(u => u.email === email);
+
         if (user.length == 0 || user[0].password !== password || !user) {
             showErrorToastr('Tài khoản hoặc mật khẩu không chính xác')
         }

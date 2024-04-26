@@ -6,7 +6,7 @@ $(document).ready(function () {
 
     const cartInner = document.getElementById('cart-inner');
     let total = 0;
-    let shipFee = 300000;
+    let shipFee = 30000;
 
     if (!cartProdStr) {
         var noCart =
@@ -24,7 +24,6 @@ $(document).ready(function () {
         // console.log(cartProdObj);
         // console.log(cartLength);
 
-
         var prodRender = '';
 
         for (let i = 0; i < cartLength; i++) {
@@ -34,10 +33,10 @@ $(document).ready(function () {
             const quantity = cartProdObj[productId];
             const subtotal = productPrice * quantity;
             total += subtotal;
-            console.log(total);
+            // console.log(total);
             if (total >= 10000000) {
                 shipFee = 0;
-                console.log(shipFee);
+                // console.log(shipFee);
             }
 
             const rowId = `cart-row-${productId - 1}`;
@@ -97,7 +96,7 @@ $(document).ready(function () {
                                     Tạm tính
                                 </div>
                                 <div id="totalTmp">
-                                    ${total.toLocaleString()}
+                                    ${total.toLocaleString()} VND
                                 </div>
                             </div>
                             <div class="row">
@@ -105,7 +104,7 @@ $(document).ready(function () {
                                     Phí giao hàng
                                 </div>
                                 <div id="shipFee">
-                                    ${shipFee.toLocaleString()}
+                                    ${shipFee.toLocaleString()}  VND
                                 </div>
                             </div>
                             <div class="row">
@@ -140,23 +139,24 @@ $(document).ready(function () {
     var qtyValues = document.querySelectorAll(".qtyVal");
 
     function calcTotal() {
-        let total = 0;
+        let ttl = 0;
         qtyValues.forEach((qtyValue) => {
             const productId = qtyValue.getAttribute("data-row").split('-')[2];
             const productPrice = parseInt(productArr[productId].price.replace(/\./g, ''));
             const subtotal = qtyValue.value * productPrice;
-            total += subtotal;
-            if (total >= 10000000) {
+            ttl += subtotal;
+            if (ttl >= 10000000) {
                 shipFee = 0;
             } else {
-                shipFee = 300000
+                shipFee = 30000
             }
-            console.log(shipFee);
-            document.getElementById('shipFee').textContent = shipFee.toLocaleString()
+            // console.log(shipFee);
+            document.getElementById('shipFee').textContent = shipFee.toLocaleString() + " VND"
             document.getElementById('subtotal-' + qtyValue.getAttribute("data-row")).textContent = subtotal.toLocaleString() + " VND";
         });
-        document.getElementById('totalTmp').textContent = total.toLocaleString()
-        document.getElementById('total').textContent = (total + shipFee).toLocaleString() + "VND"
+        document.getElementById('totalTmp').textContent = ttl.toLocaleString() + " VND"
+        document.getElementById('total').textContent = (ttl + shipFee).toLocaleString() + " VND"
+        total = ttl;
     }
 
     qtyValues.forEach((qtyValue) => {
@@ -168,8 +168,10 @@ $(document).ready(function () {
     qtyBtns.forEach((btn) => {
         btn.addEventListener("click", () => {
             const rowId = btn.getAttribute("data-row");
+            // console.log(rowId);
             const qtyValue = document.querySelector(`.qtyVal[data-row="${rowId}"]`);
             let quantity = parseInt(qtyValue.value);
+            // console.log(qtyValue);
 
             if (btn.classList.contains("minus") && quantity > 1) {
                 quantity--;
@@ -178,6 +180,7 @@ $(document).ready(function () {
             }
 
             qtyValue.value = quantity;
+            // console.log(quantity);
             calcTotal();
         });
     });
@@ -189,6 +192,7 @@ $(document).ready(function () {
             var cfm = confirm("Chắc chắn xóa?");
             if (cfm) {
                 const rowId = closeBtn.closest("tr").id;
+                // console.log(rowId);
                 const qtyValue = document.querySelector(`.qtyVal[data-row="${rowId}"]`);
                 const productId = rowId.split("-")[2];
                 // console.log(parseInt(productId) + 1);
@@ -201,14 +205,15 @@ $(document).ready(function () {
                 const subtotal = productPrice * quantity;
                 total -= subtotal;
 
+
                 if (total >= 10000000) {
                     shipFee = 0;
                 } else {
-                    shipFee = 300000;
+                    shipFee = 30000;
                 }
-                document.getElementById('shipFee').textContent = shipFee.toLocaleString();
-                document.getElementById('totalTmp').textContent = total.toLocaleString();
-                document.getElementById('total').textContent = (total + shipFee).toLocaleString();
+                document.getElementById('shipFee').textContent = shipFee.toLocaleString() + " VND";
+                document.getElementById('totalTmp').textContent = total.toLocaleString() + " VND";
+                document.getElementById('total').textContent = (total + shipFee).toLocaleString() + " VND";
 
                 // Xóa sản phẩm khỏi localStorage
                 const cartProdObj = JSON.parse(localStorage.getItem('productQuantity'));

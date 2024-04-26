@@ -4,17 +4,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giới thiệu</title>
+    <title>Hệ thống cửa hàng</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <script src="../js/jquery-3.7.1.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
+    <script src="../js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="../fonts/fontawesome-free-6.5.1-web/css/all.min.css">
-    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/responsive.css">
-    <link rel="stylesheet" href="../css/about.css">
-    <script type="module" src="../js/home.js"></script>
+    <script type="module" src="../js/product-data.js"></script>
     <script type="module" src="../js/main.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+    <style>
+        .store-info {
+            width: 60%;
+            margin: 0 auto;
+            text-align: center;
+            padding: 20px;
+            background-color: #f9f9f9; 
+            border-radius: 10px; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .store-info h1 {
+            color: #52caee; 
+            font-size: 2.5rem;
+            text-transform: uppercase;
+        }
+        
+        .store-info h2 {
+            color: #FF5722; 
+            font-size: 1.5rem;
+        }
+        
+        .store-info p {
+            color: #333; 
+            font-size: 1rem;
+        }
+        
+        .store-info a {
+            color: #FF5722;
+            text-decoration: none;
+        }
+        
+        .store-info iframe {
+            border: 3px solid #4CAF50; 
+            border-radius: 10px; 
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+        }
+        
+        .store-info .address {
+            font-weight: bold; 
+            font-size: 1.5rem; 
+
+        }
+        
+        .store-info .contact {
+            font-size: 1.2rem; 
+        }
+    </style>
 </head>
 
 <body>
@@ -264,113 +313,13 @@
             </div>
         </div>
         <!-- End nav -->
-
-
-        <div class="container-lg p-0">
-            <div class="banner">
-                <img src="../img/about-sec-1.jpg" alt="">
-                <h1>Giới thiệu Gentle Monkey</h1>
+        <div class="store-info">
+            <h1>Cửa hàng Mắt Kính</h1>
+            <div id="map">
+                <p class="address">12 Nguyễn Văn Bảo, Phường 4, Quận Gò Vấp, Tp. HCM</p>
+                <p class="contact">Contact: <a href="tel:0964302899">0394 666 888</a></p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.8582378431365!2d106.6868454!3d10.8221589!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3174deb3ef536f31%3A0x8b7bb8b7c956157b!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBDw7RuZyBuZ2hp4buHcCBUUC5IQ00!5e0!3m2!1svi!2s!4v1713975176344!5m2!1svi!2s" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-            <section class="content">
-                <ul class="breadcrumb">
-                    <li class="breadcrumb-item">
-                        <a href="home.html">Trang chủ</a>
-                    </li>
-                    <li class="breadcrumb-item active">
-                        <a href="#">Giới thiệu</a>
-                    </li>
-                </ul>
-                <div class="row">
-                    <div class="col-xs-12 col-sm-6 sol-md-7 col-lg-7">
-                        <p class="mb-0">
-                            <b>Gentle Monkey</b> 
-                            <p class="text-muted pt-0">là một trang web bán mắt kính trực tuyến,
-                                mang lại cho doanh
-                                nghiệp và khách hàng cơ hội tiện lợi để mua và bán các sản phẩm kính mắt. Với việc truy cập
-                                vào trang web này, người dùng có thể dễ dàng tìm kiếm thông tin về các loại kính mắt, xem
-                                các mẫu mới nhất và thậm chí đặt hàng trực tuyến ngay từ nhà.</p>
-                        </p>
-                        
-                        <p class="text-muted">
-                            Nhờ vào sự tiện lợi và đa dạng của Gentle Monkey, việc mua sắm kính mắt trực tuyến trở nên
-                            đơn giản hơn bao giờ hết, đồng thời giúp người dùng tiết kiệm thời gian và năng lượng so với
-                            việc phải đến các cửa hàng truyền thống.
-                        </p>
-                    </div>
-                    <img class="col-xs-12 col-sm-6 sol-md-5 col-lg-5 store-img" src="../img/store-img.jpg" alt="Store">
-                </div>
-
-            </section>
-            <!-- sec-1 -->
-            <section class="sec-one">
-                <div class="container container-custom">
-                    <div class="row justify-content-between row-one">
-                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                            <div class="p-3 m-0 border-0 bd-example bd-example-zindex-levels position-relative">
-                                <div class="z-n1 position-absolute border-0 w-50 bg-transparent">
-                                    <img src="../img/about-sec-2.jpg" alt="" class="w-100">
-                                </div>
-                                <div class="z-0 position-absolute border-0 w-50 bg-transparent picture2">
-                                    <img src="../img/about-sec-2.avif" alt="" class="w-100">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5 col-xl-5 col-two">
-                            <h6 class="mb-3 text-black-50">CÂU CHUYỆN CỦA CHÚNG TÔI</h6>
-                            <h2>VỀ CỬA HÀNG CỦA CHÚNG TÔI</h2>
-                            <p class="text-muted">
-                                Không chỉ là một cửa hàng thay thế cho việc mua sắm truyền thống, Gentle Monkey còn mang
-                                lại
-                                sự linh hoạt và thuận tiện không giới hạn về vị trí địa lý hoặc thời gian. Khách hàng có
-                                thể
-                                thoải mái duyệt qua các mẫu kính mắt từ bất kỳ đâu và mua sắm vào bất kỳ thời điểm nào
-                                trong
-                                ngày, chỉ với vài cú nhấp chuột.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- sec-2 -->
-            <section class="sec-two">
-                <div class="container-fluid bgr">
-                    <div class="container container-custom">
-                        <div class="row row-one">
-                            <div class="col-12">
-                                <h1 class="text-center mb-5">Gentle Monkey</h1>
-                            </div>
-                        </div>
-
-                        <div class="row justify-content-center mt-3">
-                            <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
-                                <p>Ở đại dương, cá voi là những sinh vật lớn mạnh, biểu tượng của sức sống và sự mênh
-                                    mông của biển cả. Tương tự như vậy, "Gentle Monkey" là nơi mà sự sáng tạo bắt đầu,
-                                    mang lại cho bạn sự lựa chọn đa dạng về kính mắt để thể hiện phong cách và cá nhân
-                                    của bạn.</p>
-                                <p>Như những quả xanh mát lấp lánh giữa bầu trời, các mẫu kính mắt tại "Gentle Monkey"
-                                    không chỉ là phụ kiện thời trang, mà còn là điểm nhấn tinh tế cho vẻ ngoài của bạn.
-                                    Với sự xuất hiện của chúng, bạn sẽ tự tin và ấn tượng.</p>
-                            </div>
-                            <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
-                                <p>"Male was. Itself." - Tự tin và độc đáo, mỗi mẫu kính mắt tại "Gentle Monkey" là một
-                                    tuyên bố về phong cách và cá nhân của bạn. Chúng được tạo ra để bạn tự tin bước đi
-                                    và thể hiện bản thân mình.</p>
-                                <p>Và trong không gian mua sắm trực tuyến này, bạn sẽ trở thành nhà sáng tạo, chủ nhân
-                                    của phong cách riêng của mình. Hãy khám phá "Gentle Monkey" ngay hôm nay và tạo ra
-                                    diện mạo mới cho bản thân!</p>
-                            </div>
-                        </div>
-
-                        <div class="row mt-5 row-three">
-                            <div class="col-12 text-center">
-                                <a href="product.html" class="btn btn-dark rounded-0"><b>Mua sắm ngay</b><i
-                                        class="fa-solid fa-arrow-right mx-2"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
         </div>
 
         <!-- Start footer -->

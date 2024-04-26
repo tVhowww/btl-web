@@ -15,8 +15,8 @@ var stringImg = `
     </div>
 `
 for (let i = 1; i < productArr[id - 1].image.length; i++) {
-     stringImg +=
-    `
+    stringImg +=
+        `
     <div class="carousel-item">
         <img src="${productArr[id - 1].image[i]}" alt="">
     </div>
@@ -60,7 +60,7 @@ var stringThumbnail =
     `
 for (let i = 1; i < productArr[id - 1].image.length; i++) {
     stringThumbnail +=
-    `
+        `
     <li class="list-inline-item">
         <a id="carousel-selector-${i}" data-bs-slide-to="${i}" data-bs-target="#custCarousel">
             <img src="${productArr[id - 1].image[i]}" class="img-fluid">
@@ -105,7 +105,7 @@ for (let i = 1; i < productArr[id - 1].image.length; i++) {
 // `
 
 const stringDetail =
-`
+    `
 <div class="row">
     <h1 style="font-size: 3rem;">${productArr[id - 1].name}</h1>
 </div>
@@ -159,9 +159,9 @@ const qtyValue = document.querySelector("#qtyVal");
 
 function calcTotal() {
     var priceStr = productArr[id - 1].price;
-        var priceTmp = parseInt(priceStr.replace(/\./g, ""));
-        var total = qtyValue.value * priceTmp;
-        document.getElementById('total-temp').value = total.toLocaleString() + " VND";
+    var priceTmp = parseInt(priceStr.replace(/\./g, ""));
+    var total = qtyValue.value * priceTmp;
+    document.getElementById('total-temp').value = total.toLocaleString() + " VND";
 }
 
 qtyValue.addEventListener('change', () => {
@@ -184,12 +184,13 @@ qtyBtns[1].addEventListener("click", () => {
 const addToCartBtn = document.querySelector('#add-to-cart');
 addToCartBtn.addEventListener('click', () => {
     const productId = localStorage.getItem('id');
-    var productQuantity = JSON.parse(localStorage.getItem('productQuantity')) || {}; 
-    
+    var productQuantity = JSON.parse(localStorage.getItem('productQuantity')) || {};
+    const qtyVal = document.getElementById('qtyVal').value;
+
     if (productQuantity[productId]) {
-        productQuantity[productId]++;
+        productQuantity[productId] = parseInt(productQuantity[productId]) + parseInt(qtyVal);
     } else {
-        productQuantity[productId] = 1;
+        productQuantity[productId] = parseInt(qtyVal);
     }
 
     localStorage.setItem('productQuantity', JSON.stringify(productQuantity));

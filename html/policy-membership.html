@@ -4,17 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giới thiệu</title>
+    <title>Chính sách thành viên</title>
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <script src="../js/jquery-3.7.1.min.js"></script>
     <script src="../js/bootstrap.min.js"></script>
+    <!-- <script src="../js/bootstrap.bundle.min.js"></script> -->
     <link rel="stylesheet" href="../fonts/fontawesome-free-6.5.1-web/css/all.min.css">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/responsive.css">
-    <link rel="stylesheet" href="../css/about.css">
-    <script type="module" src="../js/home.js"></script>
+    <script type="module" src="../js/product-data.js"></script>
     <script type="module" src="../js/main.js"></script>
+    <style>
+        .panel {
+            border: 2px solid var(--secondary-color);
+            padding: 8px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+    </style>
 </head>
 
 <body>
@@ -264,115 +272,108 @@
             </div>
         </div>
         <!-- End nav -->
+        <div class="container">
+            <h2>CHÍNH SÁCH THÀNH VIÊN & BẢO MẬT</h2>
+            <div style="font-size: 1.5rem;" class="panel-group m-3" id="accordion">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a style="font-size: 1.8rem; color: var(--secondary-color);" data-bs-toggle="collapse"
+                                data-bs-parent="#accordion" href="#collapse1">CHÍNH SÁCH THÀNH
+                                VIÊN</a>
+                        </h4>
+                    </div>
+                    <div id="collapse1" class="panel-collapse collapse show px-5">
+                        <div class="panel-body">
+                            <ul>
+                                <li><strong>Standard:</strong> Giảm 5% giá trị cho tổng đơn hàng.</li>
+                                <li><strong>VIP:</strong> Giảm 7% giá trị cho tổng đơn hàng.</li>
+                                <li><strong>VVIP:</strong> Giảm 10% giá trị cho tổng đơn hàng.</li>
+                            </ul>
+                            <p><strong>Lưu ý:</strong> Lợi ích giảm giá cho các hạng thành viên CÓ THỂ áp dụng song song
+                                với các chương trình khuyến mãi khác của GENTLE MONKEY.</p>
+                            <h3>Ưu đãi hàng tháng</h3>
+                            <p>Với từng cấp độ hàng tháng sẽ có mã CODE khuyến mãi riêng được gửi tới từng thành viên
+                                (tùy theo hạng).</p>
+                            <h3>Ưu đãi sinh nhật</h3>
+                            <p>GIẢM 30% cho 1 hóa đơn duy nhất (áp dụng trong 15 ngày kể từ ngày nhận mã).</p>
+                            <h3>Điều kiện áp dụng</h3>
+                            <ul>
+                                <li>Ưu đãi thành viên được áp dụng tại cả cửa hàng và nền tảng Website.</li>
+                                <li>Khách hàng vui lòng đọc đúng số điện thoại cho nhân viên thanh toán (với cửa hàng).
+                                </li>
+                            </ul>
+                            <h3>Điều khoản khác</h3>
+                            <ul>
+                                <li>Khách hàng vui lòng điền đúng thông tin, số điện thoại.</li>
+                                <li>Điểm tích lũy của khách hàng có thể được xem ngay tại "Trang quản lý cá nhân" của
+                                    khách hàng đó.</li>
+                                <li>Khi khách hàng lên VIP, VVIP nhân viên của GENTLE MONKEY sẽ chủ động gọi điện thông
+                                    báo cho quý khách.</li>
+                                <li>Chính sách về hạng có thể được chúng tôi thay đổi tùy theo nhu cầu thực tế.</li>
+                            </ul>
+                            <p>Mọi góp ý, hay thắc mắc xin liên hệ theo số Hotline: 0394 666 888</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h4 class="panel-title">
+                            <a style="font-size: 1.8rem; color: var(--secondary-color);" data-bs-toggle="collapse"
+                                data-bs-parent="#accordion" href="#collapse2">CHÍNH SÁCH BẢO
+                                MẬT</a>
+                        </h4>
+                    </div>
+                    <div id="collapse2" class="panel-collapse collapse px-5">
+                        <div class="panel-body">
+                            <p>Khách hàng sẽ tự chịu trách nhiệm về bảo mật và lưu giữ mọi hoạt động sử dụng dịch vụ
+                                dưới tên đăng ký, mật khẩu và hộp thư điện tử của mình. Ngoài ra, khách hàng có trách
+                                nhiệm thông báo kịp thời cho Gentle Monkey về những hành vi sử dụng trái phép, lạm dụng,
+                                vi phạm bảo mật, lưu giữ tên đăng ký và mật khẩu của bên thứ ba để có biện pháp giải
+                                quyết phù hợp.</p>
 
+                            <h3>Phạm vi sử dụng thông tin</h3>
+                            <p>Website Gentle Monkey sử dụng thông tin khách hàng cung cấp để:</p>
+                            <ul>
+                                <li>Cung cấp các dịch vụ liên quan đến khách hàng.</li>
+                                <li>Gửi các thông báo về các hoạt động trao đổi thông tin giữa khách hàng và website
+                                    Gentle Monkey.</li>
+                                <li>Ngăn ngừa các hoạt động phá hoại tài khoản người dùng của khách hàng hoặc các hoạt
+                                    động giả mạo khách hàng.</li>
+                                <li>Liên lạc và giải quyết với khách hàng trong những trường hợp đặc biệt.</li>
+                                <li>Không sử dụng thông tin cá nhân của khách hàng ngoài mục đích xác nhận và liên hệ có
+                                    liên quan đến giao dịch tại website Gentle Monkey.</li>
+                            </ul>
 
-        <div class="container-lg p-0">
-            <div class="banner">
-                <img src="../img/about-sec-1.jpg" alt="">
-                <h1>Giới thiệu Gentle Monkey</h1>
+                            <h3>Thời gian lưu trữ thông tin</h3>
+                            <p>Dữ liệu cá nhân của khách hàng sẽ được lưu trữ cho đến khi có yêu cầu hủy bỏ từ khách
+                                hàng. Còn lại trong mọi trường hợp thông tin cá nhân thành viên sẽ được bảo mật trên máy
+                                chủ của website Gentle Monkey.</p>
+
+                            <h3>Địa chỉ của đơn vị thu thập và quản lý thông tin cá nhân</h3>
+                            <p>Tên: Công Ty Cổ Phần Thương Mại Gentle Monkey.</p>
+                            <p>Địa chỉ: 12 Nguyễn Văn Bảo, Phường 4, Quận Gò Vấp, Tp. HCM</p>
+                            <p>Email: hello@gentlemonkey.vn</p>
+
+                            <h3>Phương tiện và công cụ để người dùng tiếp cận và chỉnh sửa dữ liệu cá nhân của mình</h3>
+                            <ul>
+                                <li>Khách hàng có quyền tự kiểm tra, cập nhật, điều chỉnh thông tin cá nhân của mình
+                                    bằng cách đăng nhập vào tài khoản và chỉnh sửa thông tin cá nhân hoặc yêu cầu ban
+                                    quản lý website Gentle Monkey thực hiện việc này.</li>
+                                <li>Khách hàng có quyền gửi khiếu nại về việc lộ thông tin cá nhân cho bên thứ 3 đến ban
+                                    quản trị website Gentle Monkey.</li>
+                            </ul>
+
+                            <h3>Cam kết bảo mật thông tin khách hàng</h3>
+                            <p>Thông tin cá nhân của thành viên trên Gentle Monkey được cam kết bảo mật tuyệt đối theo
+                                chính sách bảo vệ thông tin cá nhân của Gentle Monkey và việc thu thập và sử dụng thông
+                                tin của mỗi thành viên chỉ được thực hiện khi có sự đồng ý của khách hàng đó trừ những
+                                trường hợp pháp luật có quy định khác.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <section class="content">
-                <ul class="breadcrumb">
-                    <li class="breadcrumb-item">
-                        <a href="home.html">Trang chủ</a>
-                    </li>
-                    <li class="breadcrumb-item active">
-                        <a href="#">Giới thiệu</a>
-                    </li>
-                </ul>
-                <div class="row">
-                    <div class="col-xs-12 col-sm-6 sol-md-7 col-lg-7">
-                        <p class="mb-0">
-                            <b>Gentle Monkey</b> 
-                            <p class="text-muted pt-0">là một trang web bán mắt kính trực tuyến,
-                                mang lại cho doanh
-                                nghiệp và khách hàng cơ hội tiện lợi để mua và bán các sản phẩm kính mắt. Với việc truy cập
-                                vào trang web này, người dùng có thể dễ dàng tìm kiếm thông tin về các loại kính mắt, xem
-                                các mẫu mới nhất và thậm chí đặt hàng trực tuyến ngay từ nhà.</p>
-                        </p>
-                        
-                        <p class="text-muted">
-                            Nhờ vào sự tiện lợi và đa dạng của Gentle Monkey, việc mua sắm kính mắt trực tuyến trở nên
-                            đơn giản hơn bao giờ hết, đồng thời giúp người dùng tiết kiệm thời gian và năng lượng so với
-                            việc phải đến các cửa hàng truyền thống.
-                        </p>
-                    </div>
-                    <img class="col-xs-12 col-sm-6 sol-md-5 col-lg-5 store-img" src="../img/store-img.jpg" alt="Store">
-                </div>
-
-            </section>
-            <!-- sec-1 -->
-            <section class="sec-one">
-                <div class="container container-custom">
-                    <div class="row justify-content-between row-one">
-                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6">
-                            <div class="p-3 m-0 border-0 bd-example bd-example-zindex-levels position-relative">
-                                <div class="z-n1 position-absolute border-0 w-50 bg-transparent">
-                                    <img src="../img/about-sec-2.jpg" alt="" class="w-100">
-                                </div>
-                                <div class="z-0 position-absolute border-0 w-50 bg-transparent picture2">
-                                    <img src="../img/about-sec-2.avif" alt="" class="w-100">
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-5 col-xl-5 col-two">
-                            <h6 class="mb-3 text-black-50">CÂU CHUYỆN CỦA CHÚNG TÔI</h6>
-                            <h2>VỀ CỬA HÀNG CỦA CHÚNG TÔI</h2>
-                            <p class="text-muted">
-                                Không chỉ là một cửa hàng thay thế cho việc mua sắm truyền thống, Gentle Monkey còn mang
-                                lại
-                                sự linh hoạt và thuận tiện không giới hạn về vị trí địa lý hoặc thời gian. Khách hàng có
-                                thể
-                                thoải mái duyệt qua các mẫu kính mắt từ bất kỳ đâu và mua sắm vào bất kỳ thời điểm nào
-                                trong
-                                ngày, chỉ với vài cú nhấp chuột.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <!-- sec-2 -->
-            <section class="sec-two">
-                <div class="container-fluid bgr">
-                    <div class="container container-custom">
-                        <div class="row row-one">
-                            <div class="col-12">
-                                <h1 class="text-center mb-5">Gentle Monkey</h1>
-                            </div>
-                        </div>
-
-                        <div class="row justify-content-center mt-3">
-                            <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
-                                <p>Ở đại dương, cá voi là những sinh vật lớn mạnh, biểu tượng của sức sống và sự mênh
-                                    mông của biển cả. Tương tự như vậy, "Gentle Monkey" là nơi mà sự sáng tạo bắt đầu,
-                                    mang lại cho bạn sự lựa chọn đa dạng về kính mắt để thể hiện phong cách và cá nhân
-                                    của bạn.</p>
-                                <p>Như những quả xanh mát lấp lánh giữa bầu trời, các mẫu kính mắt tại "Gentle Monkey"
-                                    không chỉ là phụ kiện thời trang, mà còn là điểm nhấn tinh tế cho vẻ ngoài của bạn.
-                                    Với sự xuất hiện của chúng, bạn sẽ tự tin và ấn tượng.</p>
-                            </div>
-                            <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 col-xl-5">
-                                <p>"Male was. Itself." - Tự tin và độc đáo, mỗi mẫu kính mắt tại "Gentle Monkey" là một
-                                    tuyên bố về phong cách và cá nhân của bạn. Chúng được tạo ra để bạn tự tin bước đi
-                                    và thể hiện bản thân mình.</p>
-                                <p>Và trong không gian mua sắm trực tuyến này, bạn sẽ trở thành nhà sáng tạo, chủ nhân
-                                    của phong cách riêng của mình. Hãy khám phá "Gentle Monkey" ngay hôm nay và tạo ra
-                                    diện mạo mới cho bản thân!</p>
-                            </div>
-                        </div>
-
-                        <div class="row mt-5 row-three">
-                            <div class="col-12 text-center">
-                                <a href="product.html" class="btn btn-dark rounded-0"><b>Mua sắm ngay</b><i
-                                        class="fa-solid fa-arrow-right mx-2"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
         </div>
-
         <!-- Start footer -->
         <div class="footer">
             <div class="container-lg">
@@ -406,7 +407,7 @@
                     <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 mt-5">
                         <h4>CHÍNH SÁCH</h4>
                         <ul class="footer__list">
-                          
+
                             <li class="footer__item">
                                 <a href="exchange-warranty.html" class="footer__link">Bảo hành và Đổi trả</a>
                             </li>
@@ -416,12 +417,12 @@
                             <li class="footer__item">
                                 <a href="policy-membership.html" class="footer__link">Chính sách thành viên</a>
                             </li>
-                           
+
                             <!-- NHÃN HỊU -->
                             <a href="#"><img src="../img/bct.webp" alt="Bộ công thương" class="footer__bct-img"></a>
                         </ul>
                     </div>
-                    
+
                     <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 mt-5">
                         <h4 style="text-indent: 12px;">ĐĂNG KÝ NHẬN TIN</h4>
                         <p style="font-size: 1.4rem;color: #333;">Nhận thông tin sản phẩm mới nhất, tin khuyến mãi và
